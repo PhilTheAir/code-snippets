@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		table {
+			border-collapse: separate;
+			/*
+                separate        Borders are detached (border-spacing and empty-cells properties will not be ignored). This is default
+                collapse        Borders are collapsed into a single border when possible (border-spacing and empty-cells properties will be ignored)
+            */
+
+			/*
+                sets the distance between the borders of adjacent cells (only for the "separated borders" model).
+            */
+			border-spacing: 10px;
+			
+            caption-side: bottom;
+			/*
+                top             Puts the caption above the table. This is default
+                bottom          Puts the caption below the table
+            */
+
+			empty-cells: hide;
+			/*
+                show            ackground and borders are shown on empty cells. This is default
+                hide            No background or borders are shown on empty cells
+            */
+
+			table-layout: fixed;
+			/*
+                auto            Automatic table layout algorithm (this is default):
+                                The column width is set by the widest unbreakable content in the cells
+                                Can be slow, since it needs to read through all the content in the table, before determining the final layout
+                fixed           Fixed table layout algorithm:
+                                The horizontal layout only depends on the table's width and the width of the columns, not the contents of the cells
+                                Allows a browser to lay out the table faster than the automatic table layout
+                                The browser can begin to display the table once the first row has been received
+            */
+		}
+		
+		table, td, th {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+
+	<table>
+		<caption>Table 1.1 Customers</caption>
+		<tr>
+			<td width="5%">Petffsssssssssssffffffffer</td>
+			<td width="95%">Griffin</td>
+		</tr>
+		<tr>
+			<td>Lois</td>
+			<td></td>
+		</tr>
+	</table>
+
+
+</body>
+
+</html>

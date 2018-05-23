@@ -1,0 +1,222 @@
+﻿msysgit是Windows版的Git，从http://msysgit.github.io/下载，然后按默认选项安装即可。
+
+安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功。
+
+安装完成后，还需要最后一步设置，在命令行输入：
+
+$ git config --global user.name "Liwen Chen"
+$ git config --global user.email "clw.air@gmail.com"
+
+注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
+
+创建一个版本库：
+$ mkdir lookAtGit
+$ cd lookAtGit
+$ pwd	// 显示当前目录
+/Users/Phil/lookAtGit
+
+通过git init命令把目录变成Git可管理的仓库：
+$ git init
+Initialized empty Git repository in /Users/Phil/lookAtGit/.git/
+
+.git为隐藏文件夹，可用ls -ah命令查看。
+
+在lookAtGit文件夹中添加文件readme.txt
+
+在仓库中添加需要管理的文件：
+$ git add readme.txt
+
+使用命令git commit将文件提交到仓库：
+$ git commit -m "a test file"
+
+修改文件内容后，运行git status命令查看版本库的当前状态：
+$ git status
+
+使用git diff命令查看修改内容：
+$ git diff test.txt
+
+提交修改：分别git add并且git commit：
+$ git add test.txt
+$ git commit -m "add a word and a line"
+
+使用git log命令查看版本历史记录：
+$ git log
+
+在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，上100个版本写成HEAD~100。版本回退命令：
+$ git reset --hard HEAD^
+
+查看test.txt的内容：
+$ cat test.txt
+
+在不关闭控制台时，恢复版本：
+$ git reset --hard 3628164
+
+命令git reflog用来记录每次的操作：
+$ git reflog
+
+撤销工作区的修改：使用命令git checkout -- file：
+$ git checkout -- test.txt
+该命令可让文件回到最近一次git commit或git add时的状态。
+
+撤销暂存区的修改，并使文件重新放回工作区：使用命令git reset HEAD file：
+$ git reset HEAD test.txt
+
+从版本库中删除文件，使用命令git rm删除，并git commit：
+$ git rm test.txt
+rm 'test.txt'
+$ git commit -m "remove test.txt"
+
+恢复误删的文件至最新版本：
+$ git checkout -- test.txt
+
+创建远程仓库的SSH Key：
+$ ssh-keygen -t rsa -C "clw.air@gmail.com"
+
+GitHub需要SSH Key，用于识别出用户的推送确实是用户自己的行为。GitHub允许添加多个Key，若用户有多台电脑，则需将每台电脑的Key都添加至GitHub。在GitHub上免费托管的Git仓库，任何人都可以查阅。
+
+在本地仓库中，将本地仓库关联到Github网站中：
+$ git remote add origin git@github.com:PhilTheAir/bank.git
+
+该本地仓库的内容推送到Github的关联仓库中：
+$ git push -u origin master
+
+如出现 Updates were rejected because the tip of your current branch is behind，执行：
+git push origin master -f  
+
+从现在起，如本地作了提交，可通过以下命令同步程序：
+$ git push origin master
+
+将本地项目和远程仓库解除关联：
+$ git remote rm origin
+
+下载远程库的文档：
+$ git clone git@github.com:PhilTheAir/bank.git
+
+创建dev分支，然后切换到dev分支：
+$ git branch dev
+$ git checkout dev
+或：
+$ git checkout -b dev
+
+用git branch命令查看当前分支（当前分支前面会标一个*号）：
+$ git branch
+
+如dev分支的工作完成，则可切换回master分支：
+$ git checkout master
+把dev分支的工作成果合并到master分支：
+$ git merge dev
+
+合并完成后，删除dev分支：
+$ git branch -d dev
+
+删除后，查看branch，只剩下master分支：
+$ git branch
+
+如dev和master中，相同的文件存在不同的修改，则分支无法合并。可查看冲突的文件：
+$ git status
+
+如需创建分支开展临时的工作，需先存储当前工作仓库：
+$ git stash
+
+假定需要在master分支上修复，则在master处创建临时分支：
+$ git checkout master
+$ git checkout -b issue-101
+
+修复完成后，切换到master分支，并完成合并，最后删除issue-101分支：
+$ git checkout master
+$ git merge --no-ff -m "merged bug fix 101" issue-101
+$ git branch -d issue-101
+
+切换回dev分支：
+$ git checkout dev
+
+强行分支删除：
+$ git branch -D issue-101
+
+多人协作的工作模式是，首先，可以试图用git push origin branch-name推送自己的修改。如果推送失败，可能由于远程分支比本地的版本新，需先用git pull试图合并。如果合并有冲突，则解决冲突，并在本地提交。如没有冲突或者已解决冲突，用git push origin branch-name推送即可。如git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，通过命令git branch --set-upstream branch-name origin/branch-name创建即可。
+
+可以给本地版本打标签，首先切换到需要打标签的分支：
+$ git branch
+$ git checkout master
+Switched to branch 'master'
+使用命令git tag <name>打新标签：
+$ git tag v1.0
+使用命令git tag查看所有标签：
+$ git tag
+使用commit id给历史版本打标签：
+$ git tag v0.9 6224937
+使用git show <tagname>查看标签信息：
+$ git show v0.9
+创建带有说明的标签，用-a指定标签名，-m指定说明文字：
+$ git tag -a v0.1 -m "version 0.1 released" 3628164
+通过-s用私钥签名一个标签：
+$ git tag -s v0.2 -m "signed version 0.2 released" fec145a
+删除标签：
+$ git tag -d v0.1
+推送本地标签到远程：
+$ git push origin v1.0
+一次性推送全部本地标签：
+$ git push origin --tags
+删除远程标签前，先删除本地标签：
+$ git tag -d v0.9
+然后，再删除远程标签：
+$ git push origin :refs/tags/v0.9
+
+在Ubuntu中搭建Git：
+首先安装git：
+$ sudo apt-get install git
+创建git用户：
+$ sudo adduser git
+创建证书登录：先收集所有需要登录的用户的公钥，即id_rsa.pub文件，把所有公钥导入/home/git/.ssh/authorized_keys文件中，每行一个。
+初始化Git仓库：选定一个目录作为Git仓库，假定是/srv/sample.git，在/srv目录下输入命令：
+$ sudo git init --bare sample.git
+Git就会创建一个裸仓库，裸仓库没有工作区，因为服务器上的Git仓库纯粹是为了共享，所以不让用户直接登录到服务器上去改工作区，并且服务器上的Git仓库通常都以.git结尾。然后，把owner改为git：
+$ sudo chown -R git:git sample.git
+禁用shell登录：出于安全考虑，创建的git用户不允许登录shell，编辑/etc/passwd文件，将：
+git:x:1001:1001:,,,:/home/git:/bin/bash
+改为：
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+这样，git用户可以正常通过ssh使用git，但无法登录shell。
+克隆远程仓库：在git用户各自的电脑上运行：
+$ git clone git@server:/srv/sample.git
+之后，即可分别推送程序。
+管理公钥：如果团队很小，把每个人的公钥收集起来放到服务器的/home/git/.ssh/authorized_keys文件里是可行的。但如果团队人员过多，需用Gitosis工具管理公钥。
+管理权限：使用Gitolite。
+
+Create a new branch from any other branch while having checked out yet another branch:
+
+$ git checkout -b transaction-fail-message master
+
+Remove deleted files from the version control:
+
+$ git add -u
+
+pull the latest changes:
+
+$ git checkout my-feature-branch
+$ git pull origin my-feature-branch
+
+This will fetch and merge any changes on the remote repo into the local brach with the changes, thus now allowing you to push.
+
+Make sure that the feature branch is up to date with master, while in the feature branch, execrate the following:
+
+$ git pull origin master
+
+If there are any conflicts, best to address them here.
+
+
+To see what knowledge my local branch has of the remote branch index, adding the -r flag to git branch will return a list.
+
+$ git branch -r
+
+To keep my local repo 100% in sync with deleted remote branches, I make use of this command:
+
+$ git fetch -p
+
+The -p or --prune flag, after fetching, will remove any remote-tracking branches which no longer exist.
+
+Aliases:
+
+$ open ~/.bash_profile
+alias refresh="git checkout master && dskil && git pull && git fetch -p"
+alias dskil="find . -name '*.DS_Store' -type f -delete"

@@ -1,0 +1,1195 @@
+* {
+    box-sizing: border-box;
+}
+
+body, ul, ol {
+    margin: 0;
+    background-color: #F7E9CC;
+}
+
+body {
+    font-family: Tahoma, "Microsoft YaHei UI", "Microsoft YaHei";
+}
+
+.navbar-inner {
+    line-height: 50px;
+    background-color: white;
+}
+
+.level0 {
+    background: rgba(0,0,0,0.3);
+    line-height: 17px;
+    color: white;
+}
+
+.level0-leftHalf {
+    margin-left: 10vw;
+    display: block;
+}
+
+.level0-rightHalf {
+    padding-left: 10vw;
+}
+
+.level0-redText {
+    color: red;
+}
+
+.login {
+    cursor:pointer;
+    color: #1E90FF;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+#showLogout1, #showLogout2, #showLeftTimes1, #showLeftTimes2 {
+    display: none;
+}
+
+.logout {
+    color: red;
+    text-decoration: underline;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+
+.level1 {
+    width: 100%;
+    height: 80vh;
+    background: url('../img/ct.png') center center;
+    background-repeat: no-repeat;
+}
+
+.sun {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.iphoneAroundSun, .redPacketAroundSun, .disneyAroundSun, .bearsAroundSun, .mickeyAroundSun {
+    display: none;
+}
+
+.regAroundSun {
+    display: block;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.regAroundSun:hover, .winAroundSun:hover {
+    cursor: pointer;
+}
+
+.winAroundSun {
+    display: block;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.level2, .level3 {
+    text-align: center;
+    padding: 30px 0 20px 0;
+}
+
+.text1Level2 {
+    font-size: 16px;
+    display: block;
+    padding: 5px 0;
+}
+
+.text2Level2, .textLevel3 {
+    font-size: 18px;
+    display: block;
+    padding: 5px 0;
+}
+
+.imgLevel3 {
+    display: none;
+}
+
+.text1Level3 {
+    font-size: 22px;
+    color: red;
+    font-weight: bolder;
+    display: block;
+    padding: 5px 0;
+}
+
+.stripeLevel3, .newUserLevel3, .progressBar, .allUserLevel3 {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.progressBar {
+    width: 100%;
+}
+
+.level4 {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    position: relative;
+}
+
+.lottery {
+    position: relative;
+    max-width: 95%;
+    display: block;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.getIphone {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin320 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+.getDisney {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin350 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+.get30 {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin270 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+.get100 {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin200 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+.get10 {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin150 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+.get20 {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin100 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+.get50 {
+    animation: 
+        lottery-spin 1s 0s linear 12,
+        spin50 3s 12s ease-out 1; 
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes lottery-spin { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(360deg) } }
+
+@keyframes lottery-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin320 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(320deg) } }
+
+@keyframes spin320 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(320deg); }
+}
+
+@-webkit-keyframes spin350 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(350deg) } }
+
+@keyframes spin350 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(350deg); }
+}
+
+@-webkit-keyframes spin270 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(270deg) } }
+
+@keyframes spin270 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(270deg); }
+}
+
+@-webkit-keyframes spin200 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(200deg) } }
+
+@keyframes spin200 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(200deg); }
+}
+
+@-webkit-keyframes spin150 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(150deg) } }
+
+@keyframes spin150 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(150deg); }
+}
+
+@-webkit-keyframes spin100 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(100deg) } }
+
+@keyframes spin100 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(100deg); }
+}
+
+@-webkit-keyframes spin50 { 
+    from { -webkit-transform: rotate(0deg) } 
+    to { -webkit-transform: rotate(50deg) } }
+
+@keyframes spin50 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(50deg); }
+}
+
+.lotteryBtn {
+    position: absolute;
+    z-index: 3;
+}
+
+.lotteryBtn:hover {
+    cursor: pointer;
+}
+
+.lotteryBase {
+    position: absolute;
+    max-width: 95%;
+    display: block;
+    margin-left: 2.9vw;
+    bottom: -10px;
+    z-index: 1;
+    display: block;
+}
+
+.text1Level4 {
+    position: absolute;
+    bottom: -45px;
+    left: 70px;
+    color: #FCAE2C;
+    font-size: 12px;
+    padding: 5px 0;
+    z-index: 2;
+}
+
+.level5 {
+    text-align: center;
+    padding: 100px 0 20px 0;
+    margin: 0 auto;
+    height: 1200px;
+}
+
+.ruleTitle {
+    display: block;
+    margin-left: 18vw;
+}
+
+.ruleTitle:hover {
+    cursor: pointer;
+}
+
+.level5left {
+    height: 330px;
+    border: 10px solid #C1302A;
+    border-radius: 5px;
+    background-color: #8F211B;
+    padding: 5px;
+    display: inline-block; 
+    vertical-align: top;
+    width: 400px;
+    max-width: 100%;
+    margin: 10px 5px 0 0;
+    text-align: left;
+    overflow: scroll;
+}
+
+.customers {
+    display: block;
+    margin: 10px;
+    max-width: 98%;
+}
+
+.textDivLevel5 {
+    margin: 9px 10px;
+}
+
+.text1Level5 {
+    color: white;
+    font-size: 18px;
+}
+
+.text2Level5 {
+    color: red;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.level5Right {
+    height: 330px;
+    border: none;
+    display: inline-block; 
+    vertical-align: top;
+    width: 580px;
+    max-width: 100%;
+    margin: 10px 0 30px 0;
+}
+
+.leftPrize, .rightPrize {
+    border-radius: 5px;
+}
+
+.rightPrize {
+    margin-top: 10px;
+}
+
+.allPrize {
+    display: none;
+}
+
+.level6 {
+    background-color: #973933;
+    width: 100%;
+    text-align: center;
+}
+
+.level6Left {
+    height: 540px;
+    display: inline-block; 
+    vertical-align: top;
+    width: 450px;
+    max-width: 100%;
+}
+
+.aboutUs{
+    height: 500px;
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.level6Right {
+    height: 390px;
+    display: inline-block; 
+    vertical-align: top;
+    max-width: 100%;
+    position: relative;
+}
+
+#mobileRegForm, #wideScreenRegForm {
+    position: relative;
+    left: 0;
+    top: 30px;
+    height: 400px;
+    width: 600px;
+    max-width: 98%;
+}
+
+#wideScreenRegForm {
+    display: none;
+}
+
+.text1Level6 {
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0 0 0 15px;
+}
+
+.text2Level6 {
+    color: #BB7D79;
+    font-size: 16px;
+    margin: 10px 0 0 15px;
+}
+
+.text3Level6 {
+    color: #BB7D79;
+    font-size: 12px;
+    margin: -150px 0 0 15px;
+}
+
+.level7 {
+    background-color: #eee;
+    padding-top: 15px;
+}
+
+.level7 .copyright_block {
+    background-color: #5676a7;
+    padding-top: 20px;
+    padding-bottom: 36px;
+}
+
+.level7 .copyright_block p {
+    color: white;
+    margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .level7 .copyright_block p {
+        margin: 0 auto;
+    }
+    
+    .level7 {
+        background-color: #093988;
+    }
+
+    .level7 .copyright_block {
+        padding-top: 0;
+        background-color: #093988;
+    }
+}
+
+.level7 p {
+    margin: 0 auto;
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media (min-width: 768px) {
+    .level7 p {
+        color: white;
+        font-size: 12px;
+    }
+}
+
+.level7 .declaration {
+    max-width: 1170px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .level7 .declaration {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-indent: 2em;
+    }
+}
+
+.level7 .copyright {
+    text-align: left;
+    padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .level7 .copyright {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.3);
+    overflow-x: hidden;
+    transition: 0;
+}
+
+.popup {
+    width: 500px;
+    max-width: 80%;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 10vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.ruleFrame {
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.closebtn {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 36px;
+    color: #696969;
+    display: block;
+    transition: 0;
+}
+
+.closebtn:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.alertHead {
+    position: absolute;
+    width: 600px;
+    max-width: 125%;
+    top: -93px;
+    left: -30px;
+    z-index: -1;
+}
+
+.guaLeft {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.guaRight {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg)
+}
+
+.present1 {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 45px;
+    height: 25px;
+    z-index: 2;
+}
+
+.present2 {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    width: 45px;
+    height: 25px;
+    z-index: 2;
+}
+
+.noDeposit, .noTimesLeft, .loginDiv, .winIphonePrize, .win100CouponPrize, .winDisneyPrize, .win10DollarsPrize, .win20DollarsPrize, .win30DollarsPrize, .win50DollarsPrize, .noPrizeLeft {
+    text-align: center;
+    display: none;
+}
+
+.popupText1 {
+    margin: 50px 0 10px 0;
+    color: black;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.popupText2 {
+    color: gray;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.depositBtn {
+    border-radius: 15px;
+    background-color: #CC4B25;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 30px;
+}
+
+.loginBtn {
+    border-radius: 1px;
+    background-color: #CC4B25;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    padding: 5px 80px;
+    display: block;
+    margin: 15px auto;
+}
+
+.popupText3 {
+    margin: 10px 0 10px 0;
+    color: black;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.popupText4 {
+    color: black;
+    font-size: 12px;
+    padding: 5px;
+    display: block;
+}
+
+.popupText5 {
+    color: red;
+    font-size: 12px;
+    padding-right: 5px;
+}
+
+.inputDiv {
+    margin: 15px 5px;
+    text-align: right;
+}
+
+.inputDiv-none {
+    display: none;
+}
+
+.loginInput {
+    width: 200px;
+    height: 26px;
+    max-width: 50%;
+}
+
+.loginCode {
+    width: 68px;
+    height: 28px;
+    max-width: 20%;
+}
+
+.code {
+    width: 120px;
+    height: 36px;
+    margin-left: 5px;
+    max-width: 28%;
+}
+
+.code:hover {
+    cursor: pointer;
+}
+
+#invalidEmail, #invalidUsernamePassword, #invalidCode, #emptyLoginInfo {
+    display: none;
+}
+
+.prizeImgDiv {
+    display: block;
+    margin: auto;
+}
+
+.prizeImg {
+    height: 230px;
+    margin-top: 5px;
+    max-width: 100%;
+}
+
+.winPrizeBtn {
+    border-radius: 15px;
+    background-color: #D3987C;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+@media (min-width: 360px) {
+    .alertHead {
+        top: -106px;
+        left: -36px;
+    }
+}
+
+@media (min-width: 375px) {
+
+    .lotteryBase {
+        margin-left: 3vw;
+        bottom: -10px;
+    }
+
+    .text1Level4 {
+        bottom: -45px;
+        left: 95px;
+    }
+
+    .alertHead {
+        top: -106px;
+        left: -36px;
+    }
+
+    .inputDiv {
+        margin-right: 30px;
+    }
+
+    .winPrizeBtn {
+        padding: 5px 15px;
+    }
+}
+
+@media (min-width: 412px) {
+    .alertHead {
+        top: -115px;
+        left: -40px;
+    }
+}
+
+@media (min-width: 414px) {
+    .ruleTitle {
+        margin-left: 25vw;
+    }
+
+    .lotteryBase {
+        margin-left: 3.2vw;
+        bottom: -10px;
+    }
+
+    .text1Level4 {
+        bottom: -45px;
+        left: 120px;
+    }
+
+    .alertHead {
+        top: -115px;
+        left: -40px;
+    }
+
+    .inputDiv {
+        margin-right: 45px;
+    }
+
+    .winPrizeBtn {
+        padding: 5px 20px;
+    }
+}
+
+@media (min-width: 476px) {
+    #mobileRegForm {
+        display: none;
+    }
+
+    #wideScreenRegForm {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .level0 {
+        line-height: 30px;
+    }
+
+    .level0-leftHalf {
+        margin-left: 0;
+        display: inline;
+    }
+
+    .level0-rightHalf {
+        width: 50%;
+        position: absolute;
+        right: 10vw;
+        text-align: right;
+    }
+
+    .level1 {
+        height: 920px;
+    }
+
+    .sun, .lottery, .lotteryBase {
+        width: auto;
+        width: initial;
+    }
+
+    .regAroundSun {
+        margin-top: 5vh;
+    }
+
+    .winAroundSun {
+        margin-top: 2vh;
+    }
+
+    .text2Level2, .textLevel3 {
+        font-size: 22px;
+    }
+
+    .lottery {
+        top: -40px;
+    }
+
+    .lotteryBase {
+        margin-left: 2.7vw;
+        bottom: -10px;
+    }
+
+    .text1Level4 {
+        bottom: 10px;
+        left: 295px;
+    }
+
+    .allPrize {
+        display: inline;
+        display: initial;
+    }
+
+    .leftPrize, .rightPrize {
+        display: none;
+    }
+
+    .ruleTitle {
+        margin-left: 24vw;
+    }
+
+    .level5 {
+        height: auto;
+        height: initial;
+    }
+
+    .alertHead {
+        top: -170px;
+        left: -50px;
+    }
+
+    .inputDiv {
+        margin-right: 100px;
+    }
+
+    .winPrizeBtn {
+        padding: 5px 30px;
+    }
+
+    .level6Right {
+        height: 540px;
+    }
+
+    .text3Level6 {
+        margin: -30px 0 0 15px;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .bearsAroundSun {
+        display: inline;
+        display: initial;
+        position: absolute;
+        left: 8vw;
+        bottom: -35vh;
+    }
+
+    .mickeyAroundSun {
+        display: inline;
+        display: initial;
+        position: absolute;
+        right: 12vw;
+        bottom: -33vh;
+    }
+
+    .text2Level2 {
+        font-size: 26px;
+    }
+
+    .imgLevel3 {
+        display: inline;
+    }
+
+    .contentLevel3 {
+        display: none;
+    }
+
+    .lotteryBase {
+        margin-left: 3.3vw;
+        bottom: -10px;
+    }
+
+    .text1Level4 {
+        bottom: 15px;
+        left: 400px;
+        font-size: 14px;
+    }
+
+    .ruleTitle {
+        margin-left: 2vw;
+    }
+
+    .alertHead {
+        top: -170px;
+        left: -50px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .iphoneAroundSun, .redPacketAroundSun, .disneyAroundSun {
+        display: inline;
+        display: initial;
+    }
+
+    .iphoneAroundSun {
+        position: absolute;
+        left: 9vw;
+        top: 20vh;
+    }
+
+    .redPacketAroundSun {
+        position: absolute;
+        left: 18vw;
+        top: 55vh;
+    }
+
+    .disneyAroundSun {
+        position: absolute;
+        left: 72vw;
+        top: 30vh;
+    }
+
+    .bearsAroundSun {
+        left: 12vw;
+        bottom: -15vh;
+    }
+
+    .mickeyAroundSun {
+        right: 18vw;
+        bottom: -13vh;
+    }
+
+    .lotteryBase {
+        margin-left: 12vw;
+        bottom: -10px;
+    }
+
+    .text1Level4 {
+        bottom: 15px;
+        left: 530px;
+        font-size: 14px;
+    }
+
+    .text2Level4 {
+        bottom: -30px;
+        left: 580px;
+        font-size: 14px;
+    }
+
+    .ruleTitle {
+        margin-left: 11vw;
+    }
+
+    .level6Left {
+        border-right: 1px solid #A14B43;
+    }
+
+    .text1Level6 {
+        margin: 30px 0 0 15px;
+    }
+
+    #mobileRegForm, #wideScreenRegForm {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .iphoneAroundSun {
+        position: absolute;
+        left: 10vw;
+        top: 20vh;
+    }
+
+    .redPacketAroundSun {
+        position: absolute;
+        left: 18vw;
+        top: 55vh;
+    }
+
+    .disneyAroundSun {
+        position: absolute;
+        left: 72vw;
+        top: 30vh;
+    }
+
+    .bearsAroundSun {
+        left: 15vw;
+        bottom: -25vh;
+    }
+
+    .mickeyAroundSun {
+        right: 20vw;
+        bottom: -23vh;
+    }
+
+    .lotteryBase {
+        margin-left: 15vw;
+        bottom: -20px;
+    }
+
+    .text1Level4 {
+        bottom: 10px;
+        left: 590px;
+        font-size: 14px;
+    }
+
+    .ruleTitle {
+        margin-left: 13vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .iphoneAroundSun {
+        position: absolute;
+        left: 12vw;
+        top: 20vh;
+    }
+
+    .redPacketAroundSun {
+        position: absolute;
+        left: 20vw;
+        top: 55vh;
+    }
+
+    .disneyAroundSun {
+        position: absolute;
+        left: 70vw;
+        top: 30vh;
+    }
+
+    .lotteryBase {
+        margin-left: 16vw;
+        bottom: -20px;
+    }
+
+    .text1Level4 {
+        bottom: 10px;
+        left: 620px;
+        font-size: 14px;
+    }
+
+    .ruleTitle {
+        margin-left: 15vw;
+    }
+}
+
+@media (min-width: 1600px) {
+    .iphoneAroundSun {
+        position: absolute;
+        left: 16vw;
+        top: 20vh;
+    }
+
+    .redPacketAroundSun {
+        position: absolute;
+        left: 25vw;
+        top: 50vh;
+    }
+
+    .disneyAroundSun {
+        position: absolute;
+        left: 65vw;
+        top: 30vh;
+    }
+
+    .bearsAroundSun {
+        left: 15vw;
+        bottom: 5vh;
+    }
+
+    .mickeyAroundSun {
+        right: 20vw;
+        bottom: 7vh;
+    }
+
+    .lotteryBase {
+        margin-left: 20vw;
+        bottom: -20px;
+    }
+
+    .text1Level4 {
+        bottom: 10px;
+        left: 700px;
+        font-size: 14px;
+    }
+
+    .ruleTitle {
+        margin-left: 19vw;
+    }
+}
+
+@media (min-width: 1900px) {
+    .iphoneAroundSun {
+        position: absolute;
+        left: 20vw;
+        top: 20vh;
+    }
+
+    .redPacketAroundSun {
+        position: absolute;
+        left: 25vw;
+        top: 50vh;
+    }
+
+    .disneyAroundSun {
+        position: absolute;
+        left: 65vw;
+        top: 30vh;
+    }
+
+    .regAroundSun {
+        display: block;
+        margin: auto;
+        margin-top: 5vh;
+    }
+
+    .winAroundSun {
+        display: block;
+        margin: auto;
+        margin-top: 2vh;
+    }
+
+    .bearsAroundSun {
+        left: 25vw;
+    }
+
+    .mickeyAroundSun {
+        right: 30vw;
+    }
+
+    .lotteryBase {
+        margin-left: 24.5vw;
+        bottom: -20px;
+    }
+
+    .text1Level4 {
+        bottom: 10px;
+        left: 860px;
+        font-size: 14px;
+    }
+
+    .ruleTitle {
+        margin-left: 24vw;
+    }
+
+    .text1Level6 {
+        margin: 40px 0 0 70px;
+    }
+
+    .text2Level6 {
+        margin: 10px 0 0 70px;
+    }
+
+    .text3Level6 {
+        margin: -30px 0 0 70px;
+    }
+}

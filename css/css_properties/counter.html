@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			counter-reset: section;
+			/*
+                none        Default value. No counters will be reset
+                name        The name defines which counter that should be reset
+                number      The id defines which counter that should be reset. The number sets the value the counter is set to on each occurrence of the selector. The default reset value is 0
+            */
+		}
+		
+		h1 {
+			counter-reset: subsection;
+		}
+		
+		h1:before {
+			counter-increment: section;
+			/*
+                none        Default value. No counters will be incremented
+                id          number The id defines which counter that should be incremented. The number sets how much the counter will increment on each occurrence of the selector. 
+                            The default increment is 1. 0 or negative values, are allowed. If the id refers to a counter that has not been initialized by counter-reset, the default initial value is 0
+            */
+			content: "Section " counter(section) ". ";
+		}
+		
+		h2:before {
+			counter-increment: subsection;
+			content: counter(section) "." counter(subsection) " ";
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>HTML tutorials</h1>
+	<h2>HTML Tutorial</h2>
+	<h2>XHTML Tutorial</h2>
+	<h2>CSS Tutorial</h2>
+
+	<h1>Scripting tutorials</h1>
+	<h2>JavaScript</h2>
+	<h2>VBScript</h2>
+
+	<h1>XML tutorials</h1>
+	<h2>XML</h2>
+	<h2>XSL</h2>
+
+</body>
+
+</html>

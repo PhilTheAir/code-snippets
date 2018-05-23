@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTML5, CSS3 and JavaScript demo</title>
+</head>
+
+<body>
+	<h2>The concept</h2>
+	<p>Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore,
+		will be applied. Specificity is based on the matching rules which are composed of CSS selectors of different sorts.</p>
+
+	<h2>How is it calculated?</h2>
+
+	<p>Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the
+		matching selector. When specificity is equal to any of the multiple declarations, the last declaration found in the CSS
+		is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per
+		CSS rules directly targeted element will always take precedence over rules that an element inherits from an ancestor.</p>
+
+	<div class="note">Note: Proximity of elements in the document tree has no effect on the specificity.</div>
+
+	<h3>Selector Types</h3>
+
+	<p>The following list of selector types is by increasing specificity:</p>
+
+	<ol start="0">
+		<li>Type selectors (e.g., <code>h1</code>) and pseudo-elements (e.g., <code>:before</code>).</li>
+		<li>Class selectors (e.g., <code>.example</code>), attributes selectors (e.g., <code>[type="radio"]</code>) and pseudo-classes
+			(e.g., <code>:hover</code>).</li>
+		<li>ID selectors (e.g., <code>#example</code>).</li>
+	</ol>
+
+	<p>Universal selector (<code>*</code>), combinators (<code>+</code>, <code>&gt;</code>, <code>~</code>, '<code> </code>') and
+		negation pseudo-class (<code>:not()</code>) have no effect on specificity. (The selectors declared <em>inside</em> <code>:not()</code>		
+        do, however.)</p>
+
+	<p>Inline styles added to an element (e.g., <code>style="font-weight:bold"</code>) always overwrite any styles in external
+		stylesheets and thus can be thought of as having the highest specificity.</p>
+
+	<h3>The !<code>important</code> exception</h3>
+
+	<p>When an <code>important</code> rule is used on a style declaration, this declaration overrides any other declarations. Although
+		technically <code>!important</code> has nothing to do with specificity, it interacts directly with it. Using <code>!important</code>		
+        is <strong>bad practice</strong> and should be avoided because it makes debugging more difficult by breaking the natural
+		cascading in your stylesheets. When two conflicting declarations with the <code>!important</code> rule are applied to the
+		same element, the declaration with greater specificity will be applied.</p>
+
+	<p><strong>Some rules of thumb:</strong></p>
+
+	<ul>
+		<li><strong>Always</strong> look for a way to use specificity before even considering !important</li>
+		<li><strong>Only</strong> use <code>!important</code> on page-specific CSS that overrides foreign CSS (from external libraries,
+			like Bootstrap or normalize.css).</li>
+		<li><strong>Never</strong> use <code>!important</code> when you're writing a plugin/mashup.</li>
+		<li><strong>Never</strong> use <code>!important</code> on site-wide CSS.</li>
+	</ul>
+
+	<p><strong>Instead of using <code>!important</code>, you can:</strong></p>
+
+	<ol>
+		<li>Make better use of CSS cascading properties</li>
+		<li>
+			<p>Use more specific rules. By indicating one or more elements before the element you're selecting the rule becomes more
+				specific and gets higher priority:</p>
+
+			<pre><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"test"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;span&gt;</span><span class="pln">Text</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+
+			<pre><code><span class="pln">div</span><span class="pun">#</span><span class="pln">test span </span><span class="pun">{</span><span class="pln"> </span><span class="kwd">color</span><span class="pun">:</span><span class="pln"> green </span><span class="pun">}</span><span class="pln">
+div span { color: blue }
+span </span><span class="pun">{</span><span class="pln"> </span><span class="kwd">color</span><span class="pun">:</span><span class="pln"> red </span><span class="pun">}</span><span class="pln">
+</span></code></pre>
+		</li>
+	</ol>
+
+	<p>No matter what the order, the text will be green because that rule is most specific. (Also, the rule for blue overwrites
+		the rule for red, notwithstanding the order of the rules)</p>
+
+	<p><strong>You should use it when:</strong></p>
+
+	<p>A) Scenario one:</p>
+
+	<ol>
+		<li>You have a global CSS file that sets visual aspects of your site globally</li>
+		<li>You (or others) use inline styles on elements themselves which is a very bad practice</li>
+	</ol>
+
+	<p>In this case, you could set certain styles in your global CSS file as important thus overriding inline styles set directly
+		on elements.</p>
+
+	<p>Real world example: Some badly written <strong>jQuery plugins</strong> that use inline styles.</p>
+
+	<p>B) Another scenario</p>
+
+	<pre><code><span class="com">#someElement p {</span><span class="pln">
+    color</span><span class="pun">:</span><span class="pln"> blue</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+p</span><span class="pun">.</span><span class="pln">awesome </span><span class="pun">{</span><span class="pln">
+    color</span><span class="pun">:</span><span class="pln"> red</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+	<p>How do you make <code>awesome</code> paragraphs always turn red, even ones inside <code>#someElement</code>? Without <code>!important</code>,
+		the first rule will have more specificity and will win over the second rule.</p>
+
+	<p><strong>How to override !important</strong></p>
+
+	<p>A) Simply add another CSS rule with <code>!important</code>, and either give the selector a higher specificity (adding a
+		tag, id or class to the selector) or add a CSS rule with the same selector at a later point than the existing one. (In
+		a tie, the last rule defined wins).</p>
+
+	<p>Some examples with a higher specificity:</p>
+
+	<pre><code><span class="pln">table td    </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span>
+    <span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">myTable td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span>
+<span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
+</span><span class="com">#myTable td {height: 50px !important;}</span></code></pre>
+
+	<p>B) Or add the same selector after the existing one:</p>
+
+	<pre><code><span class="pln">td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln">
+        </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span></code></pre>
+
+	<p>C) Or rewrite the original rule to avoid the use of <code>!important</code> altogether.</p>
+
+	<h3 id="The_not_exception">The <code>:not</code> exception</h3>
+
+	<p>The negation pseudo-class <code>:not</code> is <em>not</em> considered a pseudo-class in the specificity calculation. But
+		selectors placed into the negation pseudo-class count as normal selectors when determining the count of selector types.</p>
+
+	<p>Here is a CSS chunk:</p>
+
+	<pre class="brush: css">div.outer p { color:orange; } div:not(.outer) p { color: lime; }
+	</pre>
+
+	<p>when used with the following HTML:</p>
+
+	<pre class="brush: html">&lt;div class="outer"&gt; &lt;p&gt;This is in the outer div.&lt;/p&gt; &lt;div class="inner"&gt; &lt;p&gt;This text is in
+		the inner div.&lt;/p&gt; &lt;/div&gt; &lt;/div&gt;
+	</pre>
+
+	<p>Shall appear on the screen as:</p>
+
+	<p>
+		<iframe frameborder="0" id="frame_The_not_exception" class="live-sample-frame sample-code-frame" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/Specificity$samples/The_not_exception?revision=1116421"></iframe>
+	</p>
+
+	<h3 id="Form-based_specificity">Form-based specificity</h3>
+
+	<p>Specificity is based on the form of a selector. In the following case, the selector <code>*[id="foo"]</code> counts as an
+		attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.</p>
+
+	<p>The following style declarations:</p>
+
+	<pre class="brush: css">*#foo { color: green; } *[id="foo"] { color: purple; }
+	</pre>
+
+	<p>when used with this markup:</p>
+
+	<pre class="brush: html">&lt;p id="foo"&gt;I am a sample text.&lt;/p&gt;
+	</pre>
+
+	<p>Will end up looking like:</p>
+
+	<p>
+		<iframe frameborder="0" id="frame_Form-based_specificity" class="live-sample-frame sample-code-frame" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/Specificity$samples/Form-based_specificity?revision=1116421"></iframe>
+	</p>
+
+	<p>Because it matches the same element but the ID selector has a higher specificity.</p>
+
+	<h3 id="Tree_proximity_ignorance"><a name="tree-proximity-ignorance" id="tree-proximity-ignorance">Tree proximity ignorance</a></h3>
+
+	<p>The proximity of an element to other elements that are referenced in a given selector has no impact on specificity. The
+		following style declaration:</p>
+
+	<pre class="brush: css">body h1 { color: green; } html h1 { color: purple; }
+	</pre>
+
+	<p>With the following HTML:</p>
+
+	<pre class="brush: html">&lt;html&gt; &lt;body&gt; &lt;h1&gt;Here is a title!&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;
+	</pre>
+
+	<p>Will render as:</p>
+
+	<p>
+		<iframe frameborder="0" id="frame_Tree_proximity_ignorance" class="live-sample-frame sample-code-frame" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/Specificity$samples/Tree_proximity_ignorance?revision=1116421"></iframe>
+	</p>
+
+	<p>Because the two declarations have equal <a href="#selector-type">selector type</a> counts, but the <code>html h1</code>		selector is declared last.</p>
+
+	<h3 id="Directly_targeted_elements_versus_inherited_styles"><a name="directly-targeted-elements" id="directly-targeted-elements">Directly targeted elements versus inherited styles</a></h3>
+
+	<p>Styles for a directly targeted element will always take precedence over inherited styles, regardless of the specificity
+		of the inherited rule.</p>
+
+	<pre class="brush: css" style="font-size: 14px;">#parent { color: green; } h1 { color: purple; }
+	</pre>
+
+	<p>With the following HTML:</p>
+
+	<pre class="brush: html" style="font-size: 14px;">&lt;html&gt; &lt;body id="parent"&gt; &lt;h1&gt;Here is a title!&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;
+	</pre>
+
+	<p>Will also render as:</p>
+
+	<p>
+		<iframe frameborder="0" id="frame_Directly_targeted_elements_versus_inherited_styles" class="live-sample-frame sample-code-frame"
+			src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/Specificity$samples/Directly_targeted_elements_versus_inherited_styles?revision=1116421"></iframe>
+	</p>
+
+	<p>Because the <code>h1</code> selector targets the element specifically, but the green selector is only inherited from the
+		parent.</p>
+	<p>The <strong>specified value</strong> of a CSS property is set in one out of three ways.</p>
+
+	<ol>
+		<li>If the document's stylesheet has specified a value for the property then it will be used. For example; if the <code>color</code> property is set to <code>green</code> then the text color of the
+			corresponding element will be green.</li>
+		<li>If the document's stylesheet has not specified a value then it will be inherited form the parent element (if possible).
+			For example; if we have a paragraph (<code>&lt;p&gt;</code>) inside a <code>&lt;div&gt;</code> and the <code>&lt;div&gt;</code></a> has a CSS <code>font</code> property value of "Arial"
+			and the <code>&lt;p&gt;</code> doesn't have a <code>font</code> property defined then it will inherit the Arial font.</li>
+		<li>If none of the above are available, the initial value for the element as specified by the CSS specification is applied.</li>
+	</ol>
+	<!-- End your code here -->
+</body>
+
+</html>

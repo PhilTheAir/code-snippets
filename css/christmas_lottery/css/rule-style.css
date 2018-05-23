@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body, ul, ol {
+    margin: 0;
+    background-color: white;
+}
+
+body {
+    font-family: Tahoma, "Microsoft YaHei UI", "Microsoft YaHei";
+}
+
+.textRuleTitle {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bolder;
+    display: block;
+    padding: 5px 0;
+    color: #13306A;
+    text-align: center;
+}
+
+.text1 {
+    font-size: 20px;
+    display: block;
+    padding: 5px 0;
+    color: #13306A;
+    text-align: left;
+}
+
+.text2 {
+    font-size: 16px;
+    padding: 2px 0;
+}
+
+.text3 {
+    text-indent: 2em;
+    font-size: 16px;
+    padding: 2px 0;
+}
+
+.logoImg {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.ul-asterisk {
+    list-style: none;
+}
+ 
+.ul-asterisk li:nth-child(n):before {
+    content: "*" 
+}
+
+@media (min-width: 360px) {
+
+}
+
+@media (min-width: 375px) {
+    
+}
+
+@media (min-width: 412px) {
+
+}
+
+@media (min-width: 414px) {
+
+}
+
+@media (min-width: 476px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+@media (min-width: 1366px) {
+
+}
+
+@media (min-width: 1440px) {
+
+}
+
+@media (min-width: 1600px) {
+
+}
+
+@media (min-width: 1900px) {
+
+}

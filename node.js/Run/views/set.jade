@@ -1,0 +1,121 @@
+html
+    head
+        title
+            |Stocks & Shares
+    body
+        include ./includes/head.jade
+        br
+        br
+        br
+        script.
+            function goSearching(n) {
+                window.location = 'my';    
+            }
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 连续绿盘天数
+                    - var lp = '6';
+                    input(type='text', class='form-control' value='#{lp}')
+                    span(class='input-group-addon') 天 （注：包括白盘或下跌的红盘）
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 连续下跌天数
+                    - var xd = '9';
+                    input(type='text', class='form-control' value='#{xd}')
+                    span(class='input-group-addon') 天 （注：包括白盘或上涨的绿盘）
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 连续横盘天数
+                    - var hp = '14';
+                    input(type='text', class='form-control' value='#{hp}')
+                    span(class='input-group-addon') 天  （建议日涨跌幅为 2.5 % 以内）
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 在
+                    - var lx = '8';
+                    input(type='text', class='form-control' value='#{lx}')
+                    span(class='input-group-addon') 天内，股票超跌，下跌幅度超过
+                    - var pt = '30';
+                    input(type='text', class='form-control' value='#{pt}')
+                    span(class='input-group-addon') （%）
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 涨停后，经过一段下降波，下跌幅度超过
+                    - var ztxd= '15';
+                    input(type='text', class='form-control' value='#{ztxd}')
+                    span(class='input-group-addon') % 的股票
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 涨停后，连续
+                    - var sl = '3';
+                    input(type='text', class='form-control' value='#{sl}')
+                    span(class='input-group-addon') 天的开/收盘价上涨，但成交量变化不大
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 连续
+                    - var zt = '200';
+                    input(type='text', class='form-control' value='#{zt}')
+                    span(class='input-group-addon') 个交易日内，从未涨停的股票
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 一个大涨 + 一个十字星小跌（散户减少；小涨大跌，散户增加）
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                div(class='input-group')
+                    span(class='input-group-addon') 连续
+                    - var hp = '2';
+                    input(type='text', class='form-control' value='#{hp}')
+                    span(class='input-group-addon') 个红盘，且最近成交量涨幅超
+                    - var vc = '90';
+                    input(type='text', class='form-control' value='#{vc}')
+                    span(class='input-group-addon') （%）
+            div(class='col-sm-3')
+        br
+        div(class='row')
+            div(class='col-sm-3')
+            div(class='col-sm-6')
+                button(class='btn btn-block btn-success', type='button', onclick='goSearching("1")') 搜索股票
+            div(class='col-sm-3')
+            
+        style
+            include ../public/css/css.css
+            include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+            include ../node_modules/bootstrap/dist/css/bootstrap-theme.min.css
+            include ../node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf
+        script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
+        script(src='include ../node_modules/jquery/dist/jquery.min.js')
+        script(src='include ../node_modules/angular/angular.min.js')
+        

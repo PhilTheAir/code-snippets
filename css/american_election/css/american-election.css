@@ -1,0 +1,609 @@
+* {
+    box-sizing: border-box;
+}
+
+body, ul, ol {
+    margin: 0;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+.yellow-font {
+    color: yellow;
+}
+
+.white-font {
+    color: white;
+}
+
+.red-font {
+    color: red;
+}
+
+.black-font {
+    color: black;
+}
+
+.deepskyblue-font {
+    color: deepskyblue;
+}
+
+.customized-blue-font {
+    color: #095F78;
+}
+
+.size16px {
+    font-size: 16px;
+}
+
+.size28px {
+    font-size: 28px;
+}
+
+.size1 {
+    font-size: 1em;
+}
+
+.size15 {
+    font-size: 1.5em;
+}
+
+.size2 {
+    font-size: 2em;
+}
+
+.size3 {
+    font-size: 3em;
+}
+
+.size4 {
+    font-size: 4em;
+}
+
+.size5 {
+    font-size: 5em;
+}
+
+label {
+    font-size: 16px;
+    color: red;
+    display: none;
+}
+
+#voted_label {
+    display: none;
+}
+
+.navbar-fixed-top {
+    background: white;
+    line-height: 50px;
+}
+
+.top-img {
+    background-image: url("../img/bgimg.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.letter-spacing {
+    letter-spacing: 10px;
+}
+
+.main-banner {
+    padding-top: 8vh;
+    padding-left: 25vw;
+}
+
+.sub-banner {
+    padding-top: 8vh;
+    padding-left: 25vw
+}
+
+.note-banner {
+    padding-top: 5vh;
+    padding-left: 25vw;
+}
+
+.note-img {
+    position: absolute;
+    top: -20%;
+}
+
+.form-div {
+    position: absolute;
+    bottom: -5%;
+    left: 20vw;
+    width: 400px;
+    max-width: 100vw;
+    height: 380px;
+    max-height: 60vh;
+    background-color: #053C50;
+    box-shadow: 0 0 40px 0 darkgrey;
+    padding: 0;
+    padding-top: 50px;
+    opacity: 0.7;
+	filter: Alpha(opacity=70);
+    z-index: 1;
+}
+
+.form-div:hover {
+    opacity: 1;
+	filter: Alpha(opacity=100);
+}
+
+iframe {
+    width: 90%;
+    height: 100%;
+}
+
+.gray-banner {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    padding-top: 10px;
+}
+
+.opacity70 {
+    opacity: 0.7;
+	filter: Alpha(opacity=70);
+}
+
+.bg-white {
+    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    text-indent: 2em;
+}
+
+.para-format {
+    padding-top: 60px;
+    padding-bottom: 0;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    text-indent: 2em;
+    text-align: initial;
+}
+
+.para-format2 {
+    padding-top: 10px;
+    padding-bottom: 0;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    text-indent: 2em;
+    text-align: initial;
+}
+
+.second-last {
+    background-color: white;
+    padding-top: 30px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+.customized-blue-bg-div {
+    background-color: #095F78 !important;
+    padding: 80px;
+    text-align: center;
+}
+
+.customized-blue-bg {
+    background-color: #095F78 !important;
+    text-align: center;
+}
+
+.bg-white-vote {
+    background-color: white;
+    padding: 80px;
+    text-align: center;
+}
+
+#vote_div {
+    text-align: center;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.vote-div-left {
+    float:left;
+    min-height: 280px;
+    margin-top: 10px;
+    text-align: initial;
+}
+
+.vote-div-right {
+    min-height: 280px;
+    margin-top: 30px;
+    text-align: initial;
+    padding-top: 10px;
+}
+
+.candidates-img {
+    width: 400px;
+    max-width: 100vw;
+    height: 250px;
+    margin-right: 10px;
+}
+
+#hillary, #trump {
+    cursor: pointer;
+}
+
+.check-img-left {
+    margin-top: 10px;
+    float:left;
+}
+
+.check-img-right {
+    margin-top: 10px;
+}
+
+.overlay-note-img {
+    position: absolute;
+    top: -8vh;
+    left: 0;
+}
+
+.vote-window {
+    position: absolute;
+    max-width: 80vw;
+    width: 500px;
+    height: 300px;
+    background-image: url("../img/Americaform1.jpg");
+    background-repeat: no-repeat;
+    z-index: 0;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 5vh;
+}
+
+.overlay-terms-img {
+    position: relative;
+    top: 6vh;
+    left: 12vw;
+}
+
+.terms-window {
+    width: 75vw;
+    height: 80vh;
+    margin-left: 10vw;
+    background-image: url("../img/term.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: left;
+    font-size: 16px;
+    padding: 5vh;
+    overflow: auto;
+    line-height: 200%;
+}
+
+input {
+    width: 80%;
+    margin: 10px;
+    margin-bottom: 0;
+    color: black !important;
+}
+
+.left-panel {
+    position: relative; 
+    float: left;
+    background-image: url("../img/America1.jpg");
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+    padding-top: 50px;
+    color: yellow;
+    z-index: 0;
+}
+
+.right-panel {
+    background-color: #FDF5E6;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 25vw;
+    height: 500px;
+}
+
+.squar-white {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.center {
+    display:inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.squar-panel {
+    min-width: 300px;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.shanghai-div {
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/shanghai.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.bottom-div {
+    background-color: white;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
+.bottom-form-div {
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 600px;
+    max-width: 70vw;
+    height: 347px;
+    background-image: url("../img/Americaform1.jpg");
+    max-width: 100%;
+    box-shadow: 0 0 40px 0 darkgrey;
+    padding: 0 !important;
+}
+
+#us_election3, #us_election4 {
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+.bottom-note-img {
+    position: relative;
+    bottom: 70px;
+    left: -10vw;
+}
+
+#us_election2 {
+    display: none;
+}
+
+#us_election4 {
+    display: none;
+}
+
+@media (min-width: 476px) {
+    #us_election1 {
+        display: none;
+    }
+
+    #us_election3 {
+        display: none;
+    }
+
+    #us_election2 {
+        display: block;
+    }
+
+    #us_election4 {
+        display: block;
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+#trigger-overlay {
+    margin-top: 20px;
+}
+
+.margin-block {
+    margin-top: 5px;
+    display: block;
+}
+
+body #page_bottom_tail {
+    background-color: #eee;
+    padding-top: 15px;
+}
+
+body #page_bottom_tail #page_bottom_copyright_block {
+    background-color: #5676a7;
+    padding-top: 20px;
+    padding-bottom: 36px;
+}
+
+body #page_bottom_tail #page_bottom_copyright_block p {
+    color: white;
+    margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+    body #page_bottom_tail #page_bottom_copyright_block p {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    body #page_bottom_tail {
+        background-color: #093988;
+    }
+
+    body #page_bottom_tail #page_bottom_copyright_block {
+        padding-top: 0;
+        background-color: #093988;
+    }
+}
+
+body #page_bottom_tail p {
+    margin: 0 auto;
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media (min-width: 768px) {
+    body #page_bottom_tail p {
+        color: white;
+        font-size: 12px;
+    }
+}
+
+body #page_bottom_tail #page_bottom_declaration {
+    max-width: 1170px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 899px) {
+    body #page_bottom_tail #page_bottom_declaration {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-indent: 2em;
+    }
+}
+
+body #page_bottom_tail .page_bottom_copyright {
+    text-align: left;
+    padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+    body #page_bottom_tail .page_bottom_copyright {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1220px) {
+    .right-panel {
+        padding-right: 5vw;
+    }   
+}
+
+@media (max-width: 414px) {
+    * {
+        font-size: 20px !important;
+    }
+
+    .main-banner {
+        font-size: 42px !important;
+        padding-left: 10vw;
+    }
+
+    .sub-banner  {
+        padding-left: 5vw;
+        font-size: 16px !important;
+    }
+
+    .top-img {
+        height: 700px;
+    }
+
+    .note-banner {
+        padding-left: 5vw;
+        font-size: 16px !important;
+    }
+
+    #slogan {
+        font-size: 30px !important;
+        padding-left: 5px;
+    }
+
+    body #page_bottom_tail p {
+        font-size: 12px !important;
+    }
+
+    .vote-window {
+        height: 400px;
+    }
+
+    .bottom-form-div {
+        width: 100vw;
+        left: 0;
+    }
+
+    .customized-blue-bg-div {
+        text-align: initial;
+        padding: 40px;
+    }
+
+    .bg-white-vote {
+        padding: 25px;
+    }
+
+    .form-div {
+        width: 100vw;
+        left: 0;
+        height: 280px;
+        bottom: 60px;
+        opacity: 1;
+	    filter: Alpha(opacity=100);
+    }
+
+    .para-format {
+        padding: 30px 30px 0 30px;
+        text-indent: 2em;
+        text-align: initial;
+        font-size: 14px !important;
+    }
+
+    .para-format2 {
+        padding: 10px 30px 0 30px;
+        text-indent: 2em;
+        text-align: initial;
+        font-size: 14px !important;
+    }
+
+    .shanghai-div {
+        height: 500px;
+    }
+
+    .vote-div-left {
+        margin-top: 10px !important;
+        min-height: 150px !important;
+    }
+
+    .bg-white {
+        padding: 40px;
+    }
+
+    .left-panel {
+        margin-top: 10px;
+    }
+
+    .right-panel {
+        height: 450px;
+        padding: 30px;
+    }
+
+    .second-last {
+        padding: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .terms-window {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			/*
+                background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+            */
+            /*
+                background-color: color|transparent|initial|inherit;
+            */
+			background-image: linear-gradient(to right, black 0%, white 100%), url('http://i.imgur.com/RRUe0Mo.png');
+            background-position: center; 
+            /*
+                background-position: 
+                left top        If you only specify one keyword, the other value will be "center"    
+                left center
+                left bottom
+                right top
+                right center
+                right bottom
+                center top
+                center center
+                center bottom
+                x% y%	        The first value is the horizontal position and the second value is the vertical. 
+                                The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only 
+                                specify one value, the other value will be 50%. Default value is: 0% 0%
+                xpos ypos	    The first value is the horizontal position and the second value is the vertical. 
+                                The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. 
+                                If you only specify one value, the other value will be 50%. You can mix % and positions
+            */
+			background-repeat: no-repeat;
+            /*
+                background-repeat: 
+                repeat	    The background image will be repeated both vertically and horizontally. This is default.
+                repeat-x	The background image will be repeated only horizontally
+                repeat-y	The background image will be repeated only vertically
+                no-repeat	The background-image will not be repeated
+            */
+			background-attachment: fixed;
+			/*
+                background-attachment: 
+                scroll      The background scrolls along with the element. This is default
+                fixed       The background is fixed with regard to the viewport
+                local       The background scrolls along with the element's contents
+            */
+            background-clip: content-box;
+            /*
+                background-clip: 
+                border-box	Default value. The background is clipped to the border box
+                padding-box	The background is clipped to the padding box
+                content-box	The background is clipped to the content box
+
+            */
+            background-origin: content-box;
+            /*
+                background-origin: 
+                padding-box	Default value. The background image starts from the upper left corner of the padding edge
+                border-box	The background image starts from the upper left corner of the border
+                content-box	The background image starts from the upper left corner of the content
+            */
+            /*
+                background-size: auto|length|cover|contain|initial|inherit;
+                auto	    Default value. The background-image contains its width and height
+                length	    Sets the width and height of the background image. The first value sets the width, the second value sets the height. 
+                            If only one value is given, the second is set to "auto"
+                percentage	Sets the width and height of the background image in percent of the parent element. The first value sets the width, 
+                            the second value sets the height. If only one value is given, the second is set to "auto"
+                cover	    Scale the background image to be as large as possible so that the background area is completely covered by the background image. 
+                            Some parts of the background image may not be in view within the background positioning area
+                contain	    Scale the image to the largest size such that both its width and its height can fit inside the content area
+            */
+            background-blend-mode: overlay;
+            /*
+                background-blend-mode: 
+                normal	    This is default. Sets the blending mode to normal
+                multiply	Sets the blending mode to multiply
+                screen	    Sets the blending mode to screen
+                overlay	    Sets the blending mode to overlay
+                darken	    Sets the blending mode to darken
+                lighten	    Sets the blending mode to lighten
+                color-dodge	Sets the blending mode to color-dodge
+                saturation	Sets the blending mode to saturation
+                color	    Sets the blending mode to color
+                luminosity	Sets the blending mode to luminosity
+            */
+		}
+	</style>
+</head>
+
+<body>
+
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>The background-image is fixed. Try to scroll down the page.</p>
+	<p>If you do not see any scrollbars, try to resize the browser window.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+html
+    head
+        title
+            |Stocks & Shares
+    body
+        include ./includes/head.jade
+
+        div
+            table
+                tbody
+                    each value, index in mystocks
+                        tr
+                            td
+                                value.d
+                            td
+                                value.c 
+                            td 
+                                value.s
+                
+                
+        style
+            include ../public/css/css.css
+            include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+            include ../node_modules/bootstrap/dist/css/bootstrap-theme.min.css
+        script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
+        script(src='include ../node_modules/jquery/dist/jquery.min.js')
+        script(src='include ../node_modules/angular/angular.min.js')

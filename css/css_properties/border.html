@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		p {
+			/*
+                border: border-width border-style border-color|initial|inherit;
+                border-left
+                border-right
+                border-top
+                border-bottom
+            */
+			border: 5px solid red;
+
+            /*
+                border-width: medium|thin|thick|length|initial|inherit;
+            */
+            border-width: thin medium thick 10px;
+            /*
+                top border is thin
+                right border is medium
+                bottom border is thick
+                left border is 10px
+            */
+
+            /*
+                border-style:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+            */
+            border-style: solid dotted double;
+            /*
+                top border is dotted
+                right and left borders are solid
+                bottom border is double
+            */
+
+            /*
+                border-color: color|transparent|initial|inherit;
+            */
+            border-color: green red;
+            /*
+                top and bottom borders are red
+                right and left borders are green
+            */
+
+            /*
+                box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit;
+                h-shadow        Required. The position of the horizontal shadow. Negative values are allowed
+                v-shadow        Required. The position of the vertical shadow. Negative values are allowed
+                blur            Optional. The blur distance
+                spread          Optional. The size of shadow. Negative values are allowed
+                color           Optional. The color of the shadow. The default value is black
+            */
+            box-shadow: 10px 10px 5px #888888;
+
+            /*
+                border-radius: 1-4 length|% / 1-4 length|%|initial|inherit;
+            */
+            border-radius: 25px;
+
+            height: 100px;
+		}
+
+        .border-image {
+            /*
+                border-image: source slice width outset repeat|initial|inherit;
+                border-image-source	    The path to the image to be used as a border
+                        none	    No image will be used
+                        image	    The path to the image to be used as a border
+                border-image-slice	    How to slice the border image. The image is always sliced into nine sections: four corners, four edges and the middle. 
+                                        The "middle" part is treated as fully transparent, unless the fill keyword is set.
+                        number	    The number(s) represent pixels for raster images or coordinates for vector images
+                        %	        Percentages are relative to the height or width of the image
+                        fill	    Causes the middle part of the image to be displayed
+                border-image-width	    The width of the border image
+                        length	    A length unit (px) specifying the size of the border-width
+                        number	    Default value 1. Represents multiples of the corresponding border-width
+                        %	        Refers to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets
+                border-image-outset	    The amount by which the border image area extends beyond the border box-shadow
+                        length	    A length unit specifying how far from the edges the border-image will appear. Default value is 0	Play it »
+                        number	    Represent multiples of the corresponding border-width
+                border-image-repeat	    Whether the border image should be repeated, rounded or stretched
+                        stretch	    Default value. The image is stretched to fill the area
+                        repeat	    The image is tiled (repeated) to fill the area
+                        round	    The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the image is rescaled so it fits
+                        space	    The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles	
+            */
+            border-image: url(http://www.w3schools.com/cssref/border.png) 30 round;
+
+            height: 100px;
+        }
+	</style>
+</head>
+
+<body>
+
+	<p>This is some text in a paragraph.</p>
+    <p class='border-image'>This is some text in a paragraph.</p>
+
+</body>
+
+</html>

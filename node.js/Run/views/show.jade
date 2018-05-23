@@ -1,0 +1,21 @@
+html
+    head
+        title
+            |Stocks & Shares
+    body
+        include ./includes/head.jade
+
+        input.rangeOption(type="range",min="0",max="1",step="0.1",title="Transparency: 0 to 1")
+  .labels
+    .minLabel
+      span solid
+    .maxLabel
+      span transparent
+            
+        style
+            include ../public/css/css.css
+            include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+            include ../node_modules/bootstrap/dist/css/bootstrap-theme.min.css
+        script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
+        script(src='include ../node_modules/jquery/dist/jquery.min.js')
+        script(src='include ../node_modules/angular/angular.min.js')

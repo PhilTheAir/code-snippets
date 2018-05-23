@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ACY稀万国际</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="navbar navbar-fixed-top hidden-xs">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="https://www.acyfxasia.com"><img src="https://img.acyfxasia.com/website/img/logo.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="level0">
+            <div class="container">
+                <span class='level0-leftHalf'>活动时间：2016.12.01&nbsp;-&nbsp;2016.12.31</span>
+                <span class='level0-rightHalf'>
+                <span id='loginReminder1'>欢迎您！请 <span onclick='openOverlay("loginDiv")' class='login'>登录</span></span>
+                <span id='showUserName1'></span>
+                <span id='showLogout1'> ( <span onclick='logout()' class='logout'>退出</span> ) </span>
+                <span id='showLeftTimes1'> ｜ 您有 <span id='timesLeft1' class='level0-redText'>&nbsp;</span> 次抽奖机会</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid visible-xs-block" style="margin-bottom: 20px;">
+        <div class="navbar navbar-fixed-top">
+            <div class="level0">
+                <div class="container">
+                    <span class='level0-leftHalf'>活动时间：2016.12.01&nbsp;-&nbsp;2016.12.31</span>
+                    <span class='level0-rightHalf'>
+                    <span id='loginReminder2'>欢迎您！请 <span onclick='openOverlay("loginDiv")' class='login'>登录</span></span>
+                    <span id='showUserName2'></span>
+                    <span id='showLogout2'> ( <span onclick='logout()' class='logout'>退出</span> ) </span>
+                    <span id='showLeftTimes2'> ｜ 您有 <span id='timesLeft2' class='level0-redText'>&nbsp;</span> 次抽奖机会</span>
+                </div>
+            </div>
+        </div>
+        <div class="row textAlign" style="margin-top:36px">
+            <div class="col-xs-12">
+                <a href="https://m.acyfxasia.com"><img src="https://img.acyfxasia.com/mobile/image/logo.png" alt="稀万国际" style="width:100%; height: auto; max-width: 499px;"
+                    /></a>
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px">
+            <div class="col-xs-4"><a href='https://form.acyfxasia.com/m-open-live-account' class="btn btn-primary btn-lg btn-block">真实账户</a></div>
+            <div class="col-xs-4"><a href='https://form.acyfxasia.com/m-open-demo-account' class="btn btn-success btn-lg btn-block">模拟账户</a></div>
+            <div class="col-xs-4"><a href='https://secure.acyfx.com/' class="btn btn-info btn-lg btn-block" style="color:#666666">后台登录</a></div>
+        </div>
+    </div>
+    <div class='level1'>
+        <img src='./img/sun.png' alt="" class='sun' />
+        <img src='./img/iPhone7.png' alt="" class='iphoneAroundSun' />
+        <img src='./img/redPacket.png' alt="" class='redPacketAroundSun' />
+        <img src='./img/disney.png' alt="" class='disneyAroundSun' />
+        <img src='./img/reg.png' alt="" class='regAroundSun' onclick='goToReg()' />
+        <img src='./img/win.png' alt="" class='winAroundSun' onclick='goToLottery()' />
+        <img src='./img/bears.png' alt="" class='bearsAroundSun' />
+        <img src='./img/mickey.png' alt="" class='mickeyAroundSun' />
+    </div>
+    <div class='level2'>
+        <span class='text1Level2'>为感谢广大投资者对平台的关心与支持，</span>
+        <span class='text1Level2'>ACY稀万国际在圣诞节即将来临之际，为广大交易者送上多样好礼。</span>
+        <span class='text2Level2'>入金即送10%赠金，更有万元礼品等您抽取。心动不如行动，马上参与吧！</span>
+    </div>
+    <div class='level3'>
+        <img src='./img/level3.png' alt="" class='imgLevel3' />
+        <div class='contentLevel3'>
+            <span class='text1Level3'>ACY稀万国际重磅推出开户送10%赠金</span>
+            <img src='./img/stripeLevel3.png' alt="" class='stripeLevel3' />
+            <img src='./img/newUserLevel3.png' alt="" class='newUserLevel3' />
+            <span class='textLevel3'>入金送10%赠金，入金越多，赠金越多</span>
+            <span class='textLevel3'>完成相应交易手数，赠金100%可提取，可变现</span>
+            <img src='./img/progressBar.png' alt="" class='progressBar' />
+            <span class='text1Level3'>入金即可抽奖，赢取百万豪礼！</span>
+            <img src='./img/stripeLevel3.png' alt="" class='stripeLevel3' />
+            <img src='./img/allUserLevel3.png' alt="" class='allUserLevel3' />
+        </div>
+    </div>
+    <div class='level4' id='lotteryDiv'>
+        <img src='./img/lottery.png' alt="" class='lottery' id='lotteryImg' />
+        <img type='button' src='./img/lotteryBtn.png' alt="" id='lbtn' class='lotteryBtn' onclick='window.start()' />
+        <img src='./img/lotteryBase.png' alt="" class='lotteryBase' />
+        <div class='text1Level4'>中奖记录会发送到您的注册邮箱</div>
+    </div>
+    <div class='level5' id='level5Div'>
+        <img src='./img/ruleTitle.png' alt="" class='ruleTitle' onclick='window.open("./rule.html")' />
+        <div class='level5left'>
+            <img src='./img/customers.png' alt="" class='customers' />
+            <div id='winnerlists'>
+            </div>
+        </div>
+        <div class='level5Right'>
+            <img src='./img/leftPrize.png' alt="" class='leftPrize' />
+            <img src='./img/rightPrize.png' alt="" class='rightPrize' />
+            <img src='./img/allPrize.png' alt="" class='allPrize' />
+        </div>
+    </div>
+    <div class='level6'>
+        <div class='level6Left'>
+            <img src='./img/aboutUs.png' alt="" class='aboutUs' />
+        </div>
+        <div class='level6Right' id='regDiv'>
+            <div class='text1Level6'>注册真实账户</div>
+            <div class='text2Level6'>注册真实账户，立即参加圣诞节狂欢，100%中奖！</div>
+            <iframe id="mobileRegForm" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
+            <iframe id="wideScreenRegForm" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
+            <div class='text3Level6'>注册真实账户，立即参加圣诞节狂欢，100%中奖！</div>
+        </div>
+    </div>
+    <div class="level7">
+        <p class="declaration"> 风险提示: 本网站为一般产品信息, 并未将您的个人投资目标,财政状况或需求考虑在内。 外汇保证金和差价合约交易涉及高风险, 未必适合所有投资者。 您的交易亏损有可能超过您的原始投入资金。 您并不拥有基础产品的所有权。本网站内容并不构成投资建议。
+            在决定开户交易前，请质询独立专业意见。 稀万国际不接受美国、日本等国家之开户申请。 稀万国际致力于建立一个高商业道德、强专业性，以及高信任水平的公司企业文化。现在，我们已经建立了公正、诚实和完整的声誉，这也是公司最有价值的资产。
+            我们良好的名声是由我们高道德水准和强专业性的员工所组建的。请联系我们获取更多信息。
+        </p>
+        <div class="copyright_block">
+            <p class="copyright">COPYRIGHT © 2015 ACY FX CORPORATION. </p>
+            <p class="copyright">ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+    <div id="myNav" class="overlay">
+        <div class='popup' id='popupId'>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
+            <img src='./img/alertHead.png' alt="" class='alertHead' />
+            <img src='./img/gua.png' alt="" class='guaLeft' />
+            <img src='./img/gua.png' alt="" class='guaRight' />
+            <img src='./img/present1.png' alt="" class='present1' />
+            <img src='./img/present2.png' alt="" class='present2' />
+            <div class='noDeposit'>
+                <div class='popupText1'>抱歉，您目前的可抽奖次数为零。</div>
+                <br>
+                <div class='popupText2'>银联一次性入金1000美元（或同等金额）以上可参加一次抽奖，100%中奖。</div>
+                <div class='popupText2'>每人最多可参与5次抽奖。</div>
+                <div><button class='depositBtn' onclick='window.open("https://cloudhub.acyfx.com/en/auth/login")'>立即入金</button></div>
+            </div>
+            <div class='noTimesLeft'>
+                <div class='popupText1'>抱歉，您目前的可抽奖次数为零。</div>
+                <br>
+                <div class='popupText2'>银联一次性入金1000美元（或同等金额）以上可参加一次抽奖，100%中奖。</div>
+                <div class='popupText2'>每人最多可参与5次抽奖。</div>
+                <div><button class='depositBtn' onclick='window.open("https://cloudhub.acyfx.com/en/auth/login")'>立即入金</button></div>
+            </div>
+            <div class='noPrizeLeft'>
+                <div class='popupText1'>奖没了,请参加下次活动吧!</div>
+                <br>
+                <div class='popupText2'>银联一次性入金1000美元（或同等金额）以上可参加一次抽奖，100%中奖。</div>
+            </div>
+            <div class='loginDiv'>
+                <div class='popupText3'>登录抽奖</div>
+                <div class='popupText2'>100%中奖，每人最多可抽取5次</div>
+                <div class='inputDiv'>
+                    <span class='popupText4'>CloudHub 注册邮箱 <input type='email' id='email' class='loginInput' /></span>
+                    <span id='invalidEmail' class='popupText5'><span><b>&#9888;</b></span>该邮箱没有注册</span>
+                </div>
+                <div class='inputDiv'>
+                    <span class='popupText4'>密码 <input type='password' id='password' class='loginInput' /></span>
+                    <span id='invalidUsernamePassword' class='popupText5'><span><b>&#9888;</b></span>用户名或密码有误。</span>
+                </div>
+                <div class='inputDiv-none'>
+                    <span class='popupText4'>验证码 <input type='text' id='captcha' class='loginCode' /><img id='codeImg' src='' alt='' onclick='getCaptcha()' class='code'></span></span>
+                    <span id='invalidCode' class='popupText5'><span><b>&#9888;</b></span>验证码错误</span>
+                    <span id='emptyLoginInfo' class='popupText5'><span><b>&#9888;</b></span>请填写完整的登录信息。</span>
+                </div>
+                <div><button class='loginBtn' onclick='checkToDraw()'>参与抽奖</button></div>
+                <div><a onclick='closeOverlay()' href="#regDiv" class='underLoginBtn'>注册真实账户</a></div>
+            </div>
+            <div class='winIphonePrize'>
+                <div class='prizeImgDiv'><img src='./img/iphonePrize.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+            <div class='win100CouponPrize'>
+                <div class='prizeImgDiv'><img src='./img/100coupon.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+            <div class='winDisneyPrize'>
+                <div class='prizeImgDiv'><img src='./img/disneyPrize.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+            <div class='win10DollarsPrize'>
+                <div class='prizeImgDiv'><img src='./img/10dollars.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+            <div class='win20DollarsPrize'>
+                <div class='prizeImgDiv'><img src='./img/20dollars.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+            <div class='win30DollarsPrize'>
+                <div class='prizeImgDiv'><img src='./img/30dollars.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+            <div class='win50DollarsPrize'>
+                <div class='prizeImgDiv'><img src='./img/50dollars.png' class='prizeImg' alt='' /></div>
+                <div><button onclick="closeOverlay()" class='winPrizeBtn'>中奖记录会发送到您的注册邮箱</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/arg.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

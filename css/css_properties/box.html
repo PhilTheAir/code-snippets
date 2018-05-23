@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div.relative {
+			/*
+                static	        Default value. Elements render in order, as they appear in the document flow
+                absolute	    The element is positioned relative to its first positioned (not static) ancestor element
+                fixed	        The element is positioned relative to the browser window
+                relative	    The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position
+            */
+			position: relative;
+			width: 400px;
+			height: 200px;
+			padding: 10px 5px 15px;
+			margin: 10px 5px 15px;
+			border: 3px solid #8AC007;
+		}
+		
+		div.absolute {
+			position: absolute;
+			top: 20px;
+			/*
+                bottom: 20px;
+            */
+			left: 80px;
+			/*
+                right: 80px;
+            */
+			width: 200px;
+			height: 100px;
+			z-index: -1;
+			border: 3px solid #8AC007;
+		}
+		
+		.visibility-hidden {
+			/*
+                visible	        Default value. The element is visible
+                hidden	        The element is invisible (but still takes up space)
+                collapse	    Only for table elements. collapse removes a row or column, but it does not affect the table layout. 
+                                The space taken up by the row or column will be available for other content.
+                                If collapse is used on other elements, it renders as "hidden"
+            */
+			visibility: hidden
+		}
+		
+		.clip {
+			position: absolute;
+			right: 10px;
+			clip: rect(0px, 360px, 200px, 0px);
+		}
+		
+		.maxmin {
+			min-height: 100px;
+			max-height: 150px;
+			max-width: 400px;
+			min-width: 250px;
+			background-color: yellow;
+			overflow: auto;
+		}
+		
+		.visible {
+			background-color: #00FFFF;
+			width: 100px;
+			height: 100px;
+			overflow: visible;
+		}
+		
+		.overflow-hidden {
+			margin: 100px;
+			background-color: #00FF00;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+		}
+		
+		.scroll {
+			width: 120px;
+			height: 120px;
+			border: thin solid black;
+			overflow-x: scroll;
+			overflow-y: scroll;
+		}
+		
+		.inline {
+			/*
+                inline              Default value. Displays an element as an inline element (like <span>)
+                block               Displays an element as a block element (like <p>)
+                flex                Displays an element as an block-level flex container. New in CSS3 
+                inline-block        Displays an element as an inline-level block container. The inside of this block is formatted as block-level box, and the element itself is formatted as an inline-level box 
+                inline-flex         Displays an element as an inline-level flex container. New in CSS3 
+                inline-table        The element is displayed as an inline-level table  
+                list-item           Let the element behave like a <li> element
+                run-in              Displays an element as either block or inline, depending on context  
+                table               Let the element behave like a <table> element 
+                table-caption       Let the element behave like a <caption> element 
+                table-column-group  Let the element behave like a <colgroup> element 
+                table-header-group  Let the element behave like a <thead> element 
+                table-footer-group  Let the element behave like a <tfoot> element 
+                table-row-group     Let the element behave like a <tbody> element 
+                table-cell          Let the element behave like a <td> element 
+                table-column        Let the element behave like a <col> element 
+                table-row           Let the element behave like a <tr> element 
+                none                The element will not be displayed at all (has no effect on layout)
+                initial             Sets this property to its default value. Read about initial
+                inherit             Inherits this property from its parent element. Read about inherit
+            */
+			display: inline;
+		}
+		
+		.inline-block {
+			display: inline-block;
+		}
+		
+		.float {
+			/*
+                The float property specifies whether or not a box (an element) should float.
+                Note: Absolutely positioned or width pre-set elements ignores the float property.
+            */
+			float: left;
+		}
+		
+		.clear {
+			/*
+                The clear property specifies on which sides of an element floating elements are not allowed to float.
+            */
+			clear: both;
+		}
+		
+		.vertical-align-top {
+            /*
+                baseline	    Align the baseline of the element with the baseline of the parent element. This is default
+                length	        Raises or lower an element by the specified length. Negative values are allowed
+                %	            Raises or lower an element in a percent of the "line-height" property. Negative values are allowed
+                sub	            Aligns the element as if it was subscript
+                super	        Aligns the element as if it was superscript
+                top	            The top of the element is aligned with the top of the tallest element on the line
+                text-top	    The top of the element is aligned with the top of the parent element's font
+                middle	        The element is placed in the middle of the parent element
+                bottom	        The bottom of the element is aligned with the lowest element on the line
+                text-bottom	    The bottom of the element is aligned with the bottom of the parent element's font
+                initial	        Sets this property to its default value. Read about initial
+                inherit	        Inherits this property from its parent element. Read about inherit	
+            */
+			vertical-align: text-top;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="relative">This div element has position: relative;
+		<div class="absolute">This div element has position: absolute. It is placed 70 pixels above the bottom edge of the containing positioned element
+			(div with class="relative").</div>
+	</div>
+	<h1 class="visibility-hidden">This is an invisible heading</h1>
+	<img class='clip' src='https://support.files.wordpress.com/2009/07/pigeony.jpg'>
+	<p class='maxmin'>
+		The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height
+		of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph
+		is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px.
+		The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height
+		of this paragraph is set to 50px.
+	</p>
+	<div class="visible">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+	<div class="overflow-hidden">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+	<div class="scroll">Overflow-x specifies whether or not to clip the left/right edges of the content.Overflow-y specifies whether or not to clip
+		the top/bottom edges of the content.
+	</div>
+	<p class='inline'>This is a paragraph.</p>
+	<p class='inline'>This is a paragraph.</p>
+	<p>This is a paragraph.</p>
+	<p class='inline-block'>This is a paragraph.</p>
+	<p class='inline-block'>This is a paragraph.</p>
+	<img class='float' src="https://support.files.wordpress.com/2009/07/pigeony.jpg" width="95" height="84">
+	<p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+	<p class="clear">This is also some text. This is also some text. This is also some text. This is also some text. This is also some text.
+		This is also some text.
+	</p>
+    <p>An <img class='vertical-align-top' src="https://support.files.wordpress.com/2009/07/pigeony.jpg" width="270" height="50" /> image with a default alignment.</p>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+body {
+  background-image: url("s.png");
+  image-size: 22px 30px;
+  width: 22px;
+  height: 30px;
+}
+body {
+  meter: 100mm;
+  time: 3000ms;
+  no-unit: 5;
+}
+.style {
+  font-size: 30px;
+}
+.list {
+  font-size: px;
+  padding-left: ;
+  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%201%201%22%20preserveAspectRatio%3D%22none%22%3E%3CradialGradient%20id%3D%22gradient%22%20gradientUnits%3D%22userSpaceOnUse%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2275%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffa500%22%2F%3E%3Cstop%20offset%3D%2230%25%22%20stop-color%3D%22%23008000%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23daa520%22%2F%3E%3C%2FradialGradient%3E%3Crect%20x%3D%22-50%22%20y%3D%22-50%22%20width%3D%22101%22%20height%3D%22101%22%20fill%3D%22url(%23gradient)%22%20%2F%3E%3C%2Fsvg%3E');
+}
+p {
+  font-size: 12;
+}
+p {
+  font-size: 20px;
+  color: #F79F81;
+}
+.color1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ff6600;
+}
+.color2 {
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+}
+.res {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+}
+p {
+  padding: 30px 0px 0px 25px;
+  color: white;
+}

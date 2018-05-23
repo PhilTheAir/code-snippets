@@ -1,0 +1,261 @@
+.iphone-5-portrait {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    background-image: url(../img/iphone-5-portrait.png);
+    padding: 107px 0 117px 0px;
+}
+
+.iphone-5-portrait-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 320px;
+    height: 515px;
+    padding-top: 9px;
+    padding-bottom: 44px;
+}
+
+.flashingTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+}
+
+.flashingMacTop {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+}
+
+.iphone-5-portrait-title {
+    height: 20px; 
+    width: 320px;
+}
+
+.iphone-6-portrait {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    background-image: url(../img/iphone-6-portrait.png);
+    padding: 107px 0 117px 0px;
+}
+
+.iphone-6-portrait-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 375px;
+    height: 610px;
+    padding-top: 8px;
+    padding-bottom: 44px;
+}
+
+.iphone-6-portrait-title {
+    height: 20px; 
+    width: 375px;
+}
+
+.iphone-6-plus-portrait {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    background-image: url(../img/iphone-6-plus-portrait.png);
+    padding: 107px 0 117px 0px;
+}
+
+.iphone-6-plus-portrait-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 414px;
+    height: 680px;
+    padding-top: 8px;
+    padding-bottom: 44px;
+}
+
+.iphone-6-plus-portrait-title {
+    height: 20px; 
+    width: 414px;
+}
+
+.ipad-portrait {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    background-image: url(../img/ipad-portrait.png);
+    padding: 104px 0 113px 0;
+}
+
+.ipad-portrait-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 768px;
+    height: 850px;
+    padding-top: 42px;
+    padding-bottom: 44px;
+}
+
+.ipad-portrait-title {
+    height: 95px; 
+    width: 768px;
+}
+
+.ipad-landscape {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 100px 0px;
+    position: relative;
+    background-image: url(../img/ipad-landscape.png);
+    padding: 105px 0 103px 0;
+}
+
+.ipad-landscape-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 1024px;
+    height: 670px;
+    padding-top: 44px;
+    padding-bottom: 40px;
+}
+
+.ipad-landscape-title {
+    height: 93px; 
+    width: 1024px;
+}
+
+.iphone-5-landscape {
+    background-image: url(../img/iphone-5-landscape.png);
+    padding: 22px 0 24px 0px;
+}
+
+.iphone-6-landscape {
+    background-image: url(../img/iphone-6-landscape.png);
+    padding: 22px 0 24px 0px;
+}
+
+.iphone-6-plus-landscape {
+    background-image: url(../img/iphone-6-plus-landscape.png);
+    padding: 22px 0 24px 0px;
+}
+
+.macbook-pro-13-1280 {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 100px 0px;
+    position: relative;
+    background-image: url(../img/macbook-pro-13-1280.png);
+    padding: 80px 0 0 0;
+}
+
+.macbook-pro-13-1280-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 1280px;
+    height: 805px;
+    padding-top: 0px;
+    padding-bottom: 90px;
+}
+
+.macbook-pro-13-1280-title {
+    height: 93px; 
+    width: 1280px;
+}
+
+.macbook-air-11-1366 {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 100px 0px;
+    position: relative;
+    background-image: url(../img/macbook-air-11-1366.png);
+    padding: 93px 0 103px 0;
+}
+
+.macbook-air-11-1366-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 1366px;
+    height: 740px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.macbook-air-11-1366-title {
+    height: 93px; 
+    width: 1366px;
+}
+
+.macbook-air-13-1440 {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 100px 0px;
+    position: relative;
+    background-image: url(../img/macbook-air-13-1440.png);
+    padding: 93px 0 103px 0;
+}
+
+.macbook-air-13-1440-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 1440px;
+    height: 740px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.macbook-air-13-1440-title {
+    height: 93px; 
+    width: 1440px;
+}
+
+.imac-1600 {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 100px 0px;
+    position: relative;
+    background-image: url(../img/imac-1600.png);
+    padding: 90px 0 450px 0;
+}
+
+.imac-1600-div {
+    border: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 1600px;
+    height: 963px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.imac-1600-title {
+    height: 93px; 
+    width: 1600px;
+}

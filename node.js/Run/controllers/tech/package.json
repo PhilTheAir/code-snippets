@@ -1,0 +1,13 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "async": "^1.5.2",
+    "bluebird": "^3.3.5",
+    "log4js": "^0.6.36",
+    "mongodb": "^2.1.18",
+    "xml2js": "^0.4.16",
+    "ymd-hms": "^1.1.0"
+  }
+}

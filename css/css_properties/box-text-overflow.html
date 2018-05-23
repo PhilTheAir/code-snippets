@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.border-box {
+			width: 300px;
+			height: 100px;
+			padding: 50px;
+			border: 1px solid red;
+			box-sizing: border-box;
+			/*
+                content-box         Default. The width and height properties (and min/max properties) includes only the content. Border, padding, or margin are not included
+                border-box          The width and height properties (and min/max properties) includes content, padding and border, but not the margin
+            */
+			resize: both;
+			/*
+                The resize property applies to elements whose computed overflow value is something other than "visible".
+                none                Default value. The user cannot resize the element
+                both                The user can adjust both the height and the width of the element
+                horizontal          The user can adjust the width of the element
+                vertical            The user can adjust the height of the element
+            */
+			overflow: auto;
+		}
+		
+		.text-overflow {
+			white-space: nowrap;
+			width: 12em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			border: 1px solid #000000;
+			/*
+                clip            Default value. Clips the text
+                ellipsis        Render an ellipsis ("...") to represent clipped text
+                string          Render the given string to represent clipped text 
+            */
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="border-box">Hooray!</div>
+	<div class="text-overflow">This is some long text that will notsssssssssssssssss fit in the box</div>
+</body>
+
+</html>

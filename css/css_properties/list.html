@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		ul.a {
+			list-style-type: circle;
+		}
+		
+		ul.b {
+			list-style-type: square;
+		}
+		
+		ol.c {
+			list-style-type: upper-roman;
+		}
+		
+		ol.d {
+			list-style-type: lower-alpha;
+			/*
+                disc                    Default value. The marker is a filled circle
+                armenian                The marker is traditional Armenian numbering
+                circle                  The marker is a circle
+                cjk-ideographic         The marker is plain ideographic numbers
+                decimal                 The marker is a number
+                decimal-leading-zero    The marker is a number with leading zeros (01, 02, 03, etc.)
+                georgian                The marker is traditional Georgian numbering
+                hebrew                  The marker is traditional Hebrew numbering
+                hiragana                The marker is traditional Hiragana numbering
+                hiragana-iroha          The marker is traditional Hiragana iroha numbering
+                katakana                The marker is traditional Katakana numbering
+                katakana-iroha          The marker is traditional Katakana iroha numbering
+                lower-alpha             The marker is lower-alpha (a, b, c, d, e, etc.)
+                lower-greek             The marker is lower-greek
+                lower-latin             The marker is lower-latin (a, b, c, d, e, etc.)
+                lower-roman             The marker is lower-roman (i, ii, iii, iv, v, etc.)
+                none                    No marker is shown
+                square                  The marker is a square
+                upper-alpha             The marker is upper-alpha (A, B, C, D, E, etc.) 
+                upper-latin             The marker is upper-latin (A, B, C, D, E, etc.)
+                upper-roman             The marker is upper-roman (I, II, III, IV, V, etc.)
+                initial                 Sets this property to its default value. Read about initial
+                inherit                 Inherits this property from its parent element. Read about inherit 
+            */
+			list-style-position: inside;
+			/*
+                inside                  Indents the marker and the text. The bullets appear inside the content flow
+                outside                 Keeps the marker to the left of the text. The bullets appears outside the content flow. This is default
+            */
+		}
+		
+		.ol-img {
+			list-style-image: url('https://cdn-img.easyicon.net/png/11744/1174475.gif');
+		}
+	</style>
+</head>
+
+<body>
+
+	<p>Example of unordered lists:</p>
+
+	<ul class="a">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Coca Cola</li>
+	</ul>
+
+	<ul class="b">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Coca Cola</li>
+	</ul>
+
+	<p>Example of ordered lists:</p>
+
+	<ol class="c">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Coca Cola</li>
+	</ol>
+
+	<ol class="d">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Coca Cola</li>
+	</ol>
+
+	<ol class="ol-img">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Coca Cola</li>
+	</ol>
+
+</body>
+
+</html>

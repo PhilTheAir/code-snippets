@@ -1,0 +1,1 @@
+var acy_url = "http://api.acyfxtest.com/v1";

@@ -1,0 +1,146 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CSS Web Ruler</title>
+
+	<style type="text/css">
+     
+.ruler {
+			position: relative;
+			margin: 1em; 
+
+            background: lightYellow;
+    box-shadow: 0 -1px 1em hsl(60, 60%, 84%) inset;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    height: 3em;
+    padding-right: 1cm;
+    white-space: nowrap;
+
+
+		}
+/* Wood Grain */
+.ruler:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+
+    background-image:
+    -webkit-linear-gradient(0, rgba(255,255,255,.014) 50%, transparent 50%),
+    -webkit-linear-gradient(0, rgba(255,255,255,.015) 50%, transparent 50%),
+    -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%),
+    -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.02) 50%);
+
+    -webkit-background-size: 13px, 29px, 37px, 53px;
+
+}
+
+/* Wood Panels */
+.ruler:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+
+    background-image:
+    -webkit-linear-gradient(0,transparent 97%, rgba(214, 171, 119, 0.5) 97%),
+    -webkit-linear-gradient(0,transparent 93%, rgba(173, 97, 54, 0.45) 93%),
+    -webkit-linear-gradient(0,transparent 97%, rgba(214, 171, 119, 0.9) 97%);
+  
+    -webkit-background-size: 40px;
+} 
+
+
+
+		
+		
+		.majortick,
+		.minortick,
+		.label {
+			position: absolute;
+			margin: 0px;
+			padding: 0px;
+            
+		}
+		
+		.majortick {
+			border-left: 1px solid #888;
+			height: 0.2in;
+			top: 0;
+		}
+		
+		.minortick {
+			border-left: 1px solid black;
+			height: 0.1in;
+			top: 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="custom" class="ruler"></div>
+ 
+</body>
+<script type="text/javascript">
+      window.onload = function() {
+          var width = '40';
+          var unit = 'cm';
+          var interval = '10';
+         var r = document.getElementById( 'custom' );
+
+         // genocide of the any children (erase any old ruler ticks)
+         while( r.hasChildNodes() ){
+            r.removeChild( r.firstChild );
+         }
+
+         // set the ruler's width
+         r.setAttribute( "style", "width: " + width + unit );
+
+         for( var i = 0; i < width * interval; i++ ){
+            var newcell;
+            if( i % interval == 0 ){
+               // major ticks
+               newcell = document.createElement('div');
+               newcell.setAttribute( "class", 'majortick' );
+               newcell.setAttribute( "style", "left: " + (i/interval) + 
+                                              unit + "; " + 
+                                              "width: 1"  + unit);
+               r.appendChild( newcell );
+
+               // text labels
+               newcell = document.createElement('div');
+               newcell.setAttribute( "class", 'label' );
+               newcell.setAttribute( "style", "left: "+ ((i+1)/interval) + 
+                                              unit + "; " + 
+
+
+                                              
+                                              "width: " + (1/interval) + 
+                                                   unit );
+
+               newcell.appendChild( document.createTextNode( i/interval ) ); 
+               r.appendChild( newcell );
+
+            }
+
+            // minor ticks
+            newcell = document.createElement('div');
+            newcell.setAttribute( "class", 'minortick' );
+            newcell.setAttribute( "style", "left: " + (i/interval) + unit);
+            r.appendChild( newcell );
+
+         }
+      }
+
+    </script>
+
+</html>

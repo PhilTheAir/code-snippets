@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.flex {
+			width: 800px;
+			height: 100px;
+			border: 1px solid black;
+			margin: 10px;
+			display: -webkit-flex;
+			/* Safari */
+			display: flex;
+		}
+		
+		.flex-subdiv {
+			-webkit-flex: 1;
+			/* Safari 6.1+ */
+			-ms-flex: 1;
+			/* IE 10 */
+			flex: 1;
+		}
+		
+		.flex-grow {
+			-webkit-flex-grow: 2;
+			flex-grow: 2;
+		}
+		
+		.flex-shrink {
+			-webkit-flex-shrink: 2;
+			flex-shrink: 2;
+		}
+		
+		.flex-basis {
+			-webkit-flex-basis: 100px;
+			flex-basis: 100px;
+		}
+		
+		#myRedDIV {
+			-webkit-order: 2;
+			order: 2;
+		}
+		
+		#myBlueDIV {
+			-webkit-order: 4;
+			order: 4;
+		}
+		
+		#myGreenDIV {
+			-webkit-order: 3;
+			order: 3;
+		}
+		
+		#myPinkDIV {
+			-webkit-order: 1;
+			order: 1;
+		}
+		
+		.flex-direction {
+			width: 800px;
+			height: 100px;
+			border: 1px solid #c3c3c3;
+			margin: 10px;
+			display: -webkit-flex;
+			/* Safari */
+			-webkit-flex-direction: row-reverse;
+			/* Safari 6.1+ */
+			display: flex;
+			/*
+                flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
+            */
+			flex-direction: row-reverse;
+		}
+		
+		.column-reverse {
+			width: 800px;
+			height: 200px;
+			border: 1px solid #c3c3c3;
+			margin: 10px;
+			display: -webkit-flex;
+			/* Safari */
+			-webkit-flex-direction: row-reverse;
+			/* Safari 6.1+ */
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		
+		.wrap {
+			width: 800px;
+			height: 200px;
+			border: 1px solid #c3c3c3;
+			margin: 10px;
+			display: -webkit-flex;
+			/* Safari */
+			-webkit-flex-wrap: wrap;
+			/* Safari 6.1+ */
+			display: flex;
+			/*
+                flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
+            */
+			flex-wrap: wrap;
+		}
+		
+		.justify-content {
+			width: 400px;
+			height: 150px;
+			border: 1px solid #c3c3c3;
+			margin: 10px;
+			display: -webkit-flex;
+			/* Safari */
+			-webkit-justify-content: space-around;
+			/* Safari 6.1+ */
+			display: flex;
+			/*
+                justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
+                Make some space around the items of the flexible <div> element.
+                
+                flex-start      Default value. Items are positioned at the beginning of the container
+                flex-end        Items are positioned at the end of the container
+                center          Items are positioned at the center of the container
+                space-between   Items are positioned with space between the lines
+                space-around    Items are positioned with space before, between, and after the lines
+            */
+			justify-content: space-around;
+		}
+		
+		.align-self {
+			/*
+                The align-items property specifies the default alignment for items inside the flexible container.
+                align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit;
+
+                The align-self property specifies the alignment for the selected item inside the flexible container.
+                align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit;
+            */
+			-webkit-align-self: center;
+			/* Safari 7.0+ */
+			align-self: center;
+		}
+		
+		.align-content {
+			width: 200px;
+			height: 800px;
+			border: 1px solid black;
+			margin: 10px;
+			display: -webkit-flex;
+			/* Safari */
+			display: flex;
+			/*
+                The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
+                align-content: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit;
+            */
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-align-content: space-between;
+			align-content: space-between;
+		}
+		
+		.div100px {
+			width: 60%;
+			height: 100px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="flex">
+		<div class='flex-subdiv' style="background-color:coral;">RED</div>
+		<div class='flex-subdiv' style="background-color:lightblue;">BLUE</div>
+		<div class='flex-subdiv' style="background-color:lightgreen;">Green div with more content.</div>
+	</div>
+	<div class="flex">
+		<div class='flex-subdiv' style="background-color:coral;">RED</div>
+		<div class='flex-grow' style="background-color:lightblue;">BLUE</div>
+		<div class='flex-subdiv' style="background-color:lightgreen;">Green div with more content.</div>
+	</div>
+	<div class="flex">
+		<div class='flex-subdiv' style="background-color:coral;">RED</div>
+		<div class='flex-subdiv' style="background-color:lightblue;">BLUE</div>
+		<div class='flex-shrink' style="background-color:lightgreen;">Green div with more content.</div>
+	</div>
+	<div class="flex">
+		<div class="flex-basis" style="background-color:coral;">RED</div>
+		<div class="flex-basis" style="background-color:lightblue;">BLUE</div>
+		<div class="flex-basis" style="background-color:lightgreen;">Green div with more content.</div>
+	</div>
+	<div class="flex">
+		<div style="background-color:coral;" id="myRedDIV">coral</div>
+		<div style="background-color:lightblue;" id="myBlueDIV">lightblue</div>
+		<div style="background-color:lightgreen;" id="myGreenDIV">lightgreen</div>
+		<div style="background-color:pink;" id="myPinkDIV">pink</div>
+	</div>
+	<div class="flex-direction">
+		<div style="background-color:coral;">A</div>
+		<div style="background-color:lightblue;">B</div>
+		<div style="background-color:khaki;">C</div>
+		<div style="background-color:pink;">D</div>
+		<div style="background-color:lightgrey;">E</div>
+		<div style="background-color:lightgreen;">F</div>
+	</div>
+	<div class="column-reverse">
+		<div style="background-color:coral;">A</div>
+		<div style="background-color:lightblue;">B</div>
+		<div style="background-color:khaki;">C</div>
+		<div style="background-color:pink;">D</div>
+		<div style="background-color:lightgrey;">E</div>
+		<div style="background-color:lightgreen;">F</div>
+	</div>
+	<div class='wrap'>
+		<div style="background-color:coral;">A</div>
+		<div style="background-color:lightblue;">B</div>
+		<div style="background-color:khaki;">C</div>
+		<div style="background-color:pink;">D</div>
+		<div style="background-color:lightgrey;">E</div>
+		<div style="background-color:lightgreen;">F</div>
+	</div>
+	<div class="justify-content">
+		<div style="background-color:coral;">coral</div>
+		<div style="background-color:lightblue;">lightblue</div>
+		<div style="background-color:khaki;">khaki</div>
+		<div style="background-color:pink;">pink</div>
+	</div>
+	<div class="flex">
+		<div style="background-color:coral;">RED</div>
+		<div class='align-self' style="background-color:lightblue;" id="myBlueDiv">BLUE</div>
+		<div style="background-color:lightgreen;">Green div with more content.</div>
+	</div>
+	<div class="align-content">
+		<div class='div100px' style="background-color:coral;">coral</div>
+		<div class='div100px' style="background-color:lightblue;">lightblue</div>
+		<div class='div100px' style="background-color:pink;">pink</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background: red;
+			-webkit-transition-property: width;
+			/* Safari */
+			transition-property: width;
+			/*
+                none        No property will get a transition effect
+                all         Default value. All properties will get a transition effect
+                property    Defines a comma separated list of CSS property names the transition effect is for
+            */
+			-webkit-transition-duration: 1s;
+			/* Safari */
+			transition-duration: 1s;
+			-webkit-transition-delay: 1s;
+			/* Safari */
+			transition-delay: 1s;
+			transition-timing-function: linear;
+		}
+		
+		div:hover {
+			width: 300px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div></div>
+
+</body>
+
+</html>

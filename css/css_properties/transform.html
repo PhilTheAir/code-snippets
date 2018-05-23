@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		#div1 {
+			position: relative;
+			height: 200px;
+			width: 200px;
+			margin: 100px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+		
+		#div2 {
+			padding: 50px;
+			position: absolute;
+			border: 1px solid black;
+			background-color: red;
+			-webkit-transform: rotateY(60deg);
+			/* Chrome, Safari, Opera */
+			transform: rotateY(60deg);
+			/*
+                none                Defines that there should be no transformation
+                matrix(n,n,n,n,n,n) Defines a 2D transformation, using a matrix of six values
+                matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) Defines a 3D transformation, using a 4x4 matrix of 16 values 
+                translate(x,y)      Defines a 2D translation
+                translate3d(x,y,z)  Defines a 3D translation 
+                translateX(x)       Defines a translation, using only the value for the X-axis
+                translateY(y)       Defines a translation, using only the value for the Y-axis
+                translateZ(z)       Defines a 3D translation, using only the value for the Z-axis 
+                scale(x,y)          Defines a 2D scale transformation
+                scale3d(x,y,z)      Defines a 3D scale transformation 
+                scaleX(x)           Defines a scale transformation by giving a value for the X-axis
+                scaleY(y)           Defines a scale transformation by giving a value for the Y-axis
+                scaleZ(z)           Defines a 3D scale transformation by giving a value for the Z-axis 
+                rotate(angle)       Defines a 2D rotation, the angle is specified in the parameter
+                rotate3d(x,y,z,angle) Defines a 3D rotation 
+                rotateX(angle)      Defines a 3D rotation along the X-axis
+                rotateY(angle)      Defines a 3D rotation along the Y-axis
+                rotateZ(angle)      Defines a 3D rotation along the Z-axis
+                skew(x-angle,y-angle) Defines a 2D skew transformation along the X- and the Y-axis
+                skewX(angle)        Defines a 2D skew transformation along the X-axis
+                skewY(angle)        Defines a 2D skew transformation along the Y-axis
+                perspective(n)      Defines a perspective view for a 3D transformed element
+            */
+			-webkit-transform-style: preserve-3d;
+			/* Chrome, Safari, Opera */
+			transform-style: preserve-3d;
+			/*
+            flat            Specifies that child elements will NOT preserve its 3D position. This is default
+            preserve-3d     Specifies that child elements will preserve its 3D position
+            */
+			-webkit-transform-origin: 20% 40%;
+			/* Chrome, Safari, Opera */
+			transform-origin: 20% 40%;
+			/*
+                x-axis  Defines where the view is placed at the x-axis. Possible values:
+                        left
+                        center
+                        right
+                        length
+                        %
+                y-axis  Defines where the view is placed at the y-axis. Possible values:
+                        top
+                        center
+                        bottom
+                        length
+                        %
+                z-axis  Defines where the view is placed at the z-axis (for 3D transformations). Possible values:
+                        length
+            */
+        }
+		
+		#div3 {
+			padding: 40px;
+			position: absolute;
+			border: 1px solid black;
+			background-color: yellow;
+			-webkit-transform: rotateY(-60deg);
+			/* Chrome, Safari, Opera */
+			transform: rotateY(-60deg);
+		}
+		
+		#div4 {
+			position: relative;
+			height: 150px;
+			width: 150px;
+			margin: 50px;
+			padding: 10px;
+			border: 1px solid black;
+			-webkit-perspective: 150px;
+			/* Chrome, Safari, Opera  */
+			perspective: 150px;
+			/*
+                defines how many pixels a 3D element is placed from the view. This property allows you to change the perspective on how 3D elements are viewed.
+            */
+			-webkit-perspective-origin: 40% 10%;
+			/* Chrome, Safari, Opera */
+			perspective-origin: 40% 10%;
+			/*
+                defines where a 3D element is based in the x- and the y-axis.
+                x-axis      Defining where the view is placed at the x-axis. Possible values:
+                            left
+                            center
+                            right
+                            length
+                            %
+                            Default value: 50%
+                y-axis      Defining where the view is placed at the y-axis. Possible values:
+                            top
+                            center
+                            bottom
+                            length
+                            %
+                            Default value: 50%
+            */
+		}
+		
+		#div5 {
+			padding: 50px;
+			position: absolute;
+			border: 1px solid black;
+			background-color: red;
+			-webkit-transform: rotateX(45deg);
+			/* Chrome, Safari, Opera  */
+			transform: rotateX(45deg);
+		}
+		
+		#div-visibility {
+			position: relative;
+			height: 60px;
+			width: 60px;
+			background-color: red;
+			-webkit-transform: rotateY(180deg);
+			/* Chrome, Safari, Opera */
+			transform: rotateY(180deg);
+			-webkit-backface-visibility: visible;
+			/* Chrome, Safari, Opera */
+			backface-visibility: visible;
+			/*
+                defines     whether or not an element should be visible when not facing the screen.
+                visible     Default value. The backside is visible
+                hidden      The backside is not visible
+            */
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="div1">
+		<div id="div2">HELLO
+			<div id="div3">YELLOW</div>
+		</div>
+	</div>
+
+	<div id="div4">
+		<div id="div5">HELLO</div>
+	</div>
+
+	<div id="div-visibility">DIV visibility</div>
+
+</body>
+
+</html>

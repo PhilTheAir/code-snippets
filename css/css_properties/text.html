@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.word-wrap {
+			width: 11em;
+			border: 1px solid #000000;
+			word-wrap: break-word;
+			/*
+				normal			Break words only at allowed break points
+				break-word		Allows unbreakable words to be broken
+			*/
+		}
+		
+		.word-spacing {
+			word-spacing: 30px;
+			/*
+				normal			Defines normal space between words (0.25em) . This is default
+				length			Defines an additional space between words (in px, pt, cm, em, etc). Negative values are allowed 
+			*/
+		}
+		
+		.word-break-keep-all {
+			width: 140px;
+			border: 1px solid #000000;
+			word-break: keep-all;
+			/*
+				normal			Default value. Break words according to their usual rules
+				break-all		Lines may break between any two letters
+				keep-all 		Breaks are prohibited between pairs of letters
+			*/
+		}
+		
+		.word-break-break-all {
+			width: 140px;
+			border: 1px solid #000000;
+			word-break: break-all;
+		}
+		
+		.white-space {
+			white-space: pre;
+			/*
+				normal			Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary. This is default
+				nowrap			Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered
+				pre				Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the <pre> tag in HTML
+				pre-line		Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary, and on line breaks
+				pre-wrap		Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks
+			*/
+		}
+		
+		.capitalize {
+			text-transform: capitalize;
+			/*
+				capitalize		Transforms the first character of each word to uppercase
+				uppercase		Transforms all characters to uppercase
+				lowercase		Transforms all characters to lowercase
+
+			*/
+		}
+		
+		.text-indent {
+			text-indent: 20%;
+		}
+		
+		.text-align-last {
+			text-align: justify;
+			-moz-text-align-last: right;
+			/* Code for Firefox */
+			text-align-last: right;
+			/*
+				auto			Default value. The last line is justified and aligned left
+				left			The last line is aligned to the left
+				right			The last line is aligned to the right
+				center			The last line is center-aligned
+				justify			The last line is justified as the rest of the lines
+				start			The last line is aligned at the beginning of the line (left if the text-direction is left-to-right, and right is the text-direction is right-to-left)
+				end				The last line is aligned at the end of the line (right if the text-direction is left-to-right, and left is the text-direction is right-to-left)
+
+			*/
+		}
+		
+		.text-align {
+			text-align: center;
+			/*
+				left			Aligns the text to the left
+				right			Aligns the text to the right
+				center			Centers the text
+				justify			Stretches the lines so that each line has equal width (like in newspapers and magazines)
+			*/
+		}
+		
+		.line-height {
+			line-height: 200%;
+		}
+		
+		.letter-spacing {
+			letter-spacing: 20px;
+		}
+		
+		.text-shadow {
+			font-size: 2em;
+			text-shadow: 2px 2px #FF0000;
+			/*
+				h-shadow		Required. The position of the horizontal shadow. Negative values are allowed
+				v-shadow		Required. The position of the vertical shadow. Negative values are allowed
+				blur-radius		Optional. The blur radius. Default value is 0
+				color			Optional. The color of the shadow. Look at CSS Color Values for a complete list of possible color values
+				none			Default value. No shadow
+			*/
+		}
+		
+		.text-decoration {
+			font-size: 2em;
+			text-decoration: overline;
+			/*
+				none			Defines a normal text. This is default
+				underline		Defines a line below the text
+				overline		Defines a line above the text
+				line-through	Defines a line through the text
+
+			*/
+		}
+	</style>
+</head>
+
+<body>
+
+	<p class="word-wrap">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to
+		the next line.</p>
+	<p class='word-spacing'>This is some text. This is some text.</p>
+	<p class="word-break-keep-all">This paragraph contains some text. This line will-break-at-hyphens.</p>
+	<p class="word-break-break-all">This paragraph contains some text. The lines will break at any character.</p>
+	<p class='white-space'>This is some text. </p>
+	<p class="capitalize">This is some text.</p>
+	<p class='text-indent'>
+		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+		'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the
+		advantages that you've had.'
+	</p>
+	<div class='text-align-last'>
+		You can use the text-align-last property to align the last line of a text, if the text has the text-align property set to
+		justify. This text is where you will see the result of the text-align-last property. You can use the text-align-last property
+		to align the last line of a text, if the text has the text-align property set to justify. This text is where you will see
+		the result of the text-align-last property. You can use the text-align-last property to align the last line of a text,
+		if the text has the text-align property set to justify. This text is where you will see the result of the text-align-last
+		property. You can use the text-align-last property to align the last line of a text, if the text has the text-align property
+		set to justify. This text is where you will see the result of the text-align-last property. You can use the text-align-last
+		property to align the last line of a text, if the text has the text-align property set to justify. This text is where you
+		will see the result of the text-align-last property. You can use the text-align-last property to align the last line of
+		a text, if the text has the text-align property set to justify. This text is where you will see the result of the text-align-last
+		property. You can use the text-align-last property to align the last line of a text, if the text has the text-align property
+		set to justify. This text is where you will see the result of the text-align-last property. You can use the text-align-last
+		property to align the last line of a text, if the text has the text-align property set to justify. This text is where you
+		will see the result of the text-align-last property.
+	</div>
+	<p class='text-align'>This is heading 1</p>
+	<p class="line-height">
+		This is a paragraph with a bigger line-height.<br> This is a paragraph with a bigger line-height.<br> This is a paragraph
+		with a bigger line-height.<br> This is a paragraph with a bigger line-height.<br>
+	</p>
+	<p class='letter-spacing'>This is heading 2呵呵呵</p>
+	<p class='text-shadow'>Text-shadow effect</p>
+	<p class='text-decoration'>This is heading 1</p>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Japanese vertical layout example</title>
+	<style>
+		html {
+			font-size: 10px;
+			width: 100%;
+		}
+		
+		body {
+			font-size: 1.5rem;
+			background-color: #eee;
+		}
+		
+		article {
+			width: 1280px;
+			margin: 2rem auto;
+			padding: 5rem 0;
+			background-color: white;
+			box-shadow: 0 0 5px silver;
+			font-family: "Meiryo", sans-serif;
+			color: #555;
+		}
+		
+		header {
+			width: 100%;
+			height: 1rem;
+			margin-bottom: 1rem;
+			background-size: 100% auto;
+			-ms-writing-mode: tb-rl;
+			/* old syntax. IE */
+			-webkit-writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-ms-writing-mode: vertical-rl;
+			writing-mode: vertical-rl;
+			/* new syntax */
+		}
+		
+		h1 {
+			text-shadow: 0 1px 1px grey;
+			color: white;
+			font-weight: bold;
+			font-size: 3rem;
+			padding: 11rem 12rem 0 0;
+		}
+		
+		section {
+			-ms-writing-mode: tb-rl;
+			/* old syntax. IE */
+			-webkit-writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-ms-writing-mode: vertical-rl;
+			writing-mode: vertical-rl;
+			/* new syntax */
+			font-size: 1.2rem;
+			margin-left: 5rem;
+			height: 30rem;
+		}
+		
+		section p {
+			text-indent: 1.3rem;
+			margin: 0;
+			text-align: justify;
+		}
+		
+		footer {
+			margin: 0 auto;
+			width: 800px;
+			color: grey;
+		}
+		
+		.ex1 {
+			direction: rtl;
+			/*
+				ltr 		The writing direction is left-to-right. This is default
+				rtl 		The writing direction is right-to-left
+			*/
+			unicode-bidi: bidi-override;
+			/*
+				normal 			Does not use an additional level of embedding. This is default
+				embed 			Creates an additional level of embedding
+				bidi-override 	Creates an additional level of embedding. Reordering depends on the direction property
+			*/
+		}
+	</style>
+</head>
+
+<body>
+	<article>
+		<header>
+			<h1>八幡平</h1>
+		</header>
+		<section>
+			<h2>特徴</h2>
+			<p>国立公園八幡平地域は40,489haの広さがあり、ほとんどが国有林である。手つかずの山岳公園で、アオモリトドマツやブナの原生林、山稜、湿原、噴気などの自然環境に多用な動植物が形成されている。</p>
+			<p>およそ100万年前に噴出したいくつかの火山でできている。山頂部のなだらかな様子から楯状火山とされていたが、現在では山頂が台地状になった成層火山だといわれている。頂上部には9千～5千年前に発生した水蒸気爆発により多くの火口ができている。その火口に水がたまり、八幡沼やガマ沼、メガネ沼などの沢山の火口沼が作られている。周囲には広大な湿原や針葉樹林帯が形成されている。</p>
+			<p>伝説によると、桓武天皇の勅命で奥州蝦夷征伐に訪れた坂上田村麻呂は、山賊の残党を追う途中に八幡平にたどり着き、その極楽浄土のような景色に感激した。そこで、戦の神である八幡神宮を奉り戦勝を祈り、残党を討伐後に再度高原の八幡神宮を訪れ、戦勝の報告を行うとともに、この地を「八幡平」と名付けたとされる。ただ、史実では坂上田村麻呂はこの地には至っていない。</p>
+			<p>八幡平一帯は地形がゆるやかで、残雪が豊富なことから沼や湿原が多い。湿原にはさまざまな高山植物や湿原植物の群落が発達している。
+			</p>
+			<p>八幡平山頂には二等三角点がある。あまりに平らで山頂らしくないということで、1962年に岩手県によって土盛りが行われた。それが崩れてきたので、1986年に国立公園指定30周年を記念して現在の展望台が作られた。展望台は老朽化のために、2012年11月に建て替えられた。</p>
+			<p>1993年に頂上付近の見返峠の駐車場で料金徴収が開始された。これは、有料道路であった八幡平アスピーテラインの無料化と松川温泉と藤七温泉を結ぶ樹海ラインの開通により、利用者の急増に対応するために、利用者に自然を守るための応分の負担を求めるためである。駐車料金は、公園施設の維持管理と美化清掃などの費用として使われている。</p>
+		</section>
+
+	</article>
+	<div class="ex1">Some text. Right-to-left direction.</div>
+	<footer>
+		<small lang="en">Text taken from the Japanese Wikipedia article for <a href="http://ja.wikipedia.org/wiki/八幡平" hreflang="ja">Mount Hachimantai</a>.</small>
+	</footer>
+</body>
+
+</html>

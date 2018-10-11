@@ -1,7 +1,0 @@
-node_modules
-build
-.tmp
-.sass-cache
-/tmp
-.fuse*
-npm-debug.log

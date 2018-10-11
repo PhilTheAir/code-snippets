@@ -1,4 +1,0 @@
-C:\MongoDB>mongoimport --db test --collection stocknames --drop --file C:/Users/ICBC/Documents/GitHub/NodeJS/Mongodb/stockNames.json
-2016-01-06T13:10:42.783+1100    connected to: localhost
-2016-01-06T13:10:42.788+1100    dropping: test.stocknames
-2016-01-06T13:10:43.599+1100    imported 1 document

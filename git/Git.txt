@@ -1,4 +1,8 @@
-﻿rebase: git fetch && git merge --ff-only origin/develop
+rebase: 
+git stash // only if there are conflicts
+git fetch && git merge --ff-only origin/develop
+git stash pop	//  only if stashed
+
 
 msysgit是Windows版的Git，从http://msysgit.github.io/下载，然后按默认选项安装即可。
 

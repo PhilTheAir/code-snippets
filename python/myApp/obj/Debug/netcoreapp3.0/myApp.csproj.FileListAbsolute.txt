@@ -1,0 +1,11 @@
+/Users/liwen/Documents/pp/myApp/bin/Debug/netcoreapp3.0/myApp
+/Users/liwen/Documents/pp/myApp/bin/Debug/netcoreapp3.0/myApp.deps.json
+/Users/liwen/Documents/pp/myApp/bin/Debug/netcoreapp3.0/myApp.runtimeconfig.json
+/Users/liwen/Documents/pp/myApp/bin/Debug/netcoreapp3.0/myApp.runtimeconfig.dev.json
+/Users/liwen/Documents/pp/myApp/bin/Debug/netcoreapp3.0/myApp.dll
+/Users/liwen/Documents/pp/myApp/bin/Debug/netcoreapp3.0/myApp.pdb
+/Users/liwen/Documents/pp/myApp/obj/Debug/netcoreapp3.0/myApp.csprojAssemblyReference.cache
+/Users/liwen/Documents/pp/myApp/obj/Debug/netcoreapp3.0/myApp.AssemblyInfoInputs.cache
+/Users/liwen/Documents/pp/myApp/obj/Debug/netcoreapp3.0/myApp.AssemblyInfo.cs
+/Users/liwen/Documents/pp/myApp/obj/Debug/netcoreapp3.0/myApp.dll
+/Users/liwen/Documents/pp/myApp/obj/Debug/netcoreapp3.0/myApp.pdb
